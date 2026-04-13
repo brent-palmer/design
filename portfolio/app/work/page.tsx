@@ -19,11 +19,11 @@ export default function WorkPage() {
       <Container className="space-y-16 sm:space-y-24">
         <div className="max-w-xl space-y-6">
           <Heading level={1} variant="title">
-            Work
+            Selected work
           </Heading>
           <Text muted size="lg">
-            Case studies across analytics, fintech-adjacent flows, and design
-            systems—usually with engineers in the loop from day one.
+          Work spanning B2B SaaS, healthcare, and internal systems, with a
+          focus on AI workflows and strategic outcomes
           </Text>
         </div>
         <div className="divide-y divide-foreground/10">

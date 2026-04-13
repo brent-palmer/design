@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { ButtonLink } from "@/components/ui/button";
+import { CopyEmailButton } from "@/components/copy-email-button";
 import { ProjectRow } from "@/components/project-row";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -13,28 +14,20 @@ export default function Home() {
     <>
       <Section className="pb-12 sm:pb-16">
         <Container className="space-y-10">
-          <Heading level={1} variant="display">
-            Design for clarity at scale.
-          </Heading>
+          <div className="space-y-4">
+            <Heading level={4} variant="eyebrow">
+              Hi, I'm Brent.
+            </Heading>
+            <Heading level={1} variant="display">
+              I design products that make complex systems feel simple.
+            </Heading>
+          </div>
           <Text muted size="lg" className="max-w-md">
-            Product designer focused on calm interfaces, trustworthy data, and
-            teams that move fast without breaking things.
-          </Text>
-          <p>
-            <Link
-              href="/work"
-              className="text-sm font-medium text-foreground underline decoration-foreground/20 underline-offset-4 transition-colors hover:decoration-foreground"
-            >
-              View work
-            </Link>
-            <span className="mx-3 text-muted-foreground">·</span>
-            <Link
-              href="/contact"
-              className="text-sm font-medium text-muted-foreground underline decoration-transparent underline-offset-4 transition-colors hover:text-foreground hover:decoration-foreground/20"
-            >
-              Contact
-            </Link>
-          </p>
+          I help B2B SaaS teams turn messy systems into scalable experiences that actually work — improving onboarding, clarifying data, and creating interfaces customers love.         </Text>
+          <div className="flex items-center gap-3">
+            <ButtonLink href="/work" variant="primary">View work</ButtonLink>
+            <CopyEmailButton className="inline-flex items-center rounded-full border border-foreground/20 px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-foreground/50" />
+          </div>
         </Container>
       </Section>
 

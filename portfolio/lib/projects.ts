@@ -14,14 +14,14 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "northwind-analytics",
-    title: "Northwind Analytics",
-    tagline: "Self-serve reporting for operations teams",
-    year: "2025",
-    role: "Lead product design",
+    slug: "zocdoc",
+    title: "Zocdoc",
+    tagline: "Designing the system that made onboarding for healthcare practices possible",
+    year: "2026",
+    role: "Principal Product Designer",
     featured: true,
     summary:
-      "Redefined how warehouse managers explore daily throughput without exporting spreadsheets.",
+      "Zocdoc's provider onboarding was fragmented, with disconnected flows and manual work slowing enterprise go-lives and straining ops. I designed a unified onboarding system — a new enterprise Home, guided tasks for staff, and a bulk NPI tool — giving practices a single source of truth.",
     cover: "/globe.svg",
     problem:
       "Teams relied on static weekly PDFs and ad-hoc SQL requests, slowing decisions during peak season.",
@@ -31,52 +31,55 @@ export const projects: Project[] = [
       "Cut time-to-insight for the pilot cohort by roughly half; became the template for two sister products.",
   },
   {
-    slug: "ledger-mobile",
-    title: "Ledger Mobile",
-    tagline: "Payments you can explain in one screen",
+    slug: "samepage",
+    title: "Samepage",
+    tagline: "AI that does the structural thinking so PMs don't have to",
+    year: "2025",
+    role: "Lead Product Designer",
+    featured: true,
+    summary:
+      "Samepage is a platform that helps project managers and teams collaborate more effectively.",
+      cover: "/globe.svg",
+    problem:
+      "Project managers and teams were struggling to collaborate effectively.",
+    approach:
+      "We built a platform that helps project managers and teams collaborate more effectively.",
+    outcome:
+      "Project managers and teams are now collaborating more effectively.",
+  },
+  {
+    slug: "tango",
+    title: "Tango",
+    tagline: "How-to guides that creates themselves as you do the work",
     year: "2024",
-    role: "Product design",
+    role: "Lead Product Designer",
     featured: true,
     summary:
-      "A calmer mobile experience for small businesses reconciling payouts and fees.",
+      "Tango is a platform that helps project managers and teams collaborate more effectively.",
+      cover: "/globe.svg",
     problem:
-      "Merchants saw inconsistent balances across web and app, eroding trust in payout timing.",
+      "Project managers and teams were struggling to collaborate effectively.",
     approach:
-      "Aligned on a single ledger narrative—available, pending, and fees—using plain language and predictable hierarchy.",
+      "We built a platform that helps project managers and teams collaborate more effectively.",
     outcome:
-      "Higher task completion in usability tests; fewer support tickets tagged “balance confusion.”",
+      "Project managers and teams are now collaborating more effectively.",
   },
   {
-    slug: "atlas-onboarding",
-    title: "Atlas Onboarding",
-    tagline: "From signup to first value in minutes",
-    year: "2023",
-    role: "Design systems",
-    featured: true,
-    summary:
-      "A modular onboarding flow that adapts to company size and compliance needs.",
-    problem:
-      "New teams abandoned setup when legal and billing steps appeared in arbitrary order.",
-    approach:
-      "Mapped jobs-to-be-done, then split flows into composable blocks owned by different squads.",
-    outcome:
-      "Reduced drop-off before first project creation; design system patterns reused in three adjacent flows.",
-  },
-  {
-    slug: "signal-research",
-    title: "Signal Research",
-    tagline: "Qualitative synthesis at scale",
-    year: "2022",
-    role: "Founding designer",
+    slug: "handraise",
+    title: "Handraise",
+    tagline: "Discovering the right product by building the wrong one first",
+    year: "2024",
+    role: "Lead Product Designer",
     featured: false,
     summary:
-      "Tools for tagging, clustering, and sharing interview insights across a distributed research org.",
+      "Handraise is a platform that helps project managers and teams collaborate more effectively.",
+      cover: "/handraise/handraise-hero1.avif",
     problem:
-      "Insights lived in siloed docs; product teams duplicated interviews and missed patterns.",
+      "Project managers and teams were struggling to collaborate effectively.",
     approach:
-      "Shipped an MVP around shared tags and lightweight affinity mapping, with strict import from existing note tools.",
+      "We built a platform that helps project managers and teams collaborate more effectively.",
     outcome:
-      "Research ops adopted it as source of truth for two product lines; informed roadmap prioritization workshops.",
+      "Project managers and teams are now collaborating more effectively.",
   },
 ];
 
