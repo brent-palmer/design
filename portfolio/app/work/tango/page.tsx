@@ -165,7 +165,7 @@ export default function TangoPage() {
 
           {/* What I Designed */}
           <section className="space-y-12">
-            <Heading as="h2" level={2} variant="h2">What I Designed</Heading>
+            <Heading as="h2" level={2} variant="h2">What I designed</Heading>
 
             {/* North Star */}
             <div className="space-y-6">
@@ -183,7 +183,7 @@ export default function TangoPage() {
               <LightboxImage
                 src="/tango/north%20star.avif"
                 alt="Capture, Polish, Share—three-step system diagram"
-                caption="System diagram — capture, guide, share flow"
+                caption="North star — capture, polish, share"
               />
             </div>
 
@@ -218,7 +218,7 @@ export default function TangoPage() {
               <LightboxImage
                 src="/tango/editing-hero.avif"
                 alt="Tango guide editor—sidebar steps, drag and drop, and inline step preview"
-                caption="Editor — contextual toolbar, inline editing, annotation panel"
+                caption="Editor — contextual toolbar, drag-and-drop step ordering"
               />
             </div>
 
@@ -238,17 +238,16 @@ export default function TangoPage() {
                   </Text>
                 </div>
                 <div className="space-y-2">
-                  <Heading as="h4" level={4} variant="h4">Built for reading, not editing</Heading>
+                  <Heading as="h4" level={4} variant="h4">Share the love, not the screen</Heading>
                   <Text muted>
-                    The viewing experience strips UI chrome, sidebar, and distractions. Clean enough
-                    to drop into Slack or an onboarding doc without looking like a tool artifact.
+                  Tango works wherever your team already works. Drop guides right into your favorite docs or how-to tools with simple embeds. The current set of supported tools comes straight from customer discovery, focusing on what most teams already use. It's a practical 80/20 approach that maximizes reach without overbuilding.
                   </Text>
                 </div>
               </div>
               <LightboxImage
                 src="/tango/embed.avif"
                 alt="Embed flow—share guide into Notion and other platforms"
-                caption="Shareable guide view — clean public-facing output"
+                caption="One guide, everywhere your team needs it"
               />
             </div>
 
@@ -256,30 +255,27 @@ export default function TangoPage() {
             <div className="space-y-8">
               <Heading as="h3" level={3} variant="h3">PLG foundation — designing the growth loop</Heading>
               <Text muted>
-                Getting a user to create their first guide was table stakes. The real challenge was
+                Getting a user to create their first guide was essential. The real challenge was
                 turning individual value into team adoption.
               </Text>
               <div className="space-y-8">
                 <div className="space-y-2">
-                  <Heading as="h4" level={4} variant="h4">The aha moment</Heading>
+                  <Heading as="h4" level={4} variant="h4">The "aha" moment</Heading>
                   <Text muted>
-                    Activation is not creation. It's the first time a guide is opened by someone
-                    else. That shift refocused onboarding on sharing, not just producing.
+                  Activation isn't about creating—it's about sharing. The "aha" moment is when someone else opens your guide for the first time. That shift reframed onboarding from creating to sharing, not just producing.
                   </Text>
                 </div>
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Intent-based upgrade</Heading>
                   <Text muted>
-                    I placed the upgrade moment at the point of intent. When a user tries to share
-                    into a workspace they don't belong to, the prompt appears. Contextual and timely,
-                    not a cold upsell.
+                  The upgrade moment is when a user tries to share into a workspace they don't belong to. That's the moment to prompt them to upgrade to a paid plan. Contextual and timely, not a cold upsell.
                   </Text>
                 </div>
               </div>
               <LightboxImage
                 src="/tango/export.avif"
                 alt="Export gated behind Pro—upgrade prompt in the share and export flow"
-                caption="PLG upgrade moment — contextual prompt at point of sharing"
+                caption="Upgrade moment — contextual prompt at point of sharing"
               />
               <LightboxImage
                 src="/tango/core%20view.avif"
@@ -333,7 +329,7 @@ export default function TangoPage() {
             <div className="space-y-4">
               <Heading as="h3" level={3} variant="h3">Shipped</Heading>
               <BulletList items={[
-                "Guide editing experience and shareable links shipped to all customers",
+                "Guide editing experience and shareable links to all customers",
                 "PLG upgrade path from individual to team use",
               ]} />
             </div>
@@ -354,37 +350,6 @@ export default function TangoPage() {
               I lost count of how many 30-minute how-to meetings I had to set up with people. Death
               by 30-minute meetings. Now, I can just send a Tango, saving so much time and errors.
             </Quote>
-          </section>
-
-          {/* What I Learned */}
-          <section className="space-y-8">
-            <Heading as="h2" level={2} variant="h2">What I Learned</Heading>
-            <div className="space-y-8">
-              <div className="space-y-2">
-                <Heading as="h3" level={3} variant="h3">Naming the right job to be done unlocked everything</Heading>
-                <Text muted>
-                  "Documentation" implied effort. "Your guide is already done" changed the product.
-                  That shift shaped capture, editing, and the growth loop. Getting the framing right
-                  early had the biggest impact.
-                </Text>
-              </div>
-              <div className="space-y-2">
-                <Heading as="h3" level={3} variant="h3">Speed comes from deliberate constraints</Heading>
-                <Text muted>
-                  Five weeks was enough because we cut aggressively. No team features, no mobile, no
-                  integrations. Every omission was intentional. That focus made the work shippable
-                  and the signal clear.
-                </Text>
-              </div>
-              <div className="space-y-2">
-                <Heading as="h3" level={3} variant="h3">What I'd do differently</Heading>
-                <Text muted>
-                  I'd invest in the sharing experience earlier. Most of the sprint focused on capture
-                  and editing. The consumption side came late and wasn't deeply tested. Earlier work
-                  there would have strengthened the overall product.
-                </Text>
-              </div>
-            </div>
           </section>
 
         </Container>
