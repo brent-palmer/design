@@ -27,10 +27,10 @@ const variantClasses: Record<HeadingVariant, string> = {
   label:
     "text-xs font-medium uppercase tracking-[0.2em] text-muted-foreground font-mono",
   eyebrow:
-    "text-lg font-medium leading-snug tracking-tight text-muted-foreground font-sans",
+    "text-base font-medium leading-snug tracking-tight text-muted-foreground font-sans",
   h2: "text-4xl sm:text-5xl font-light tracking-[0.5px] leading-tight text-foreground font-heading",
-  h3: "text-xl font-semibold leading-snug tracking-normal text-foreground font-sans",
-  h4: "text-base font-semibold leading-snug tracking-tight text-foreground font-sans",
+  h3: "text-2xl font-semibold leading-snug tracking-normal text-foreground font-sans",
+  h4: "text-xl font-semibold leading-snug tracking-tight text-foreground font-sans",
 };
 
 export function Heading<T extends ElementType = "h1">({

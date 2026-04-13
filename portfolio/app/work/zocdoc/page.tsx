@@ -114,7 +114,7 @@ export default function ZocdocPage() {
 
             <div className="space-y-4">
               <Heading as="h3" level={3} variant="h3">For providers and practice staff</Heading>
-              <ul className="space-y-2 text-muted-foreground text-base leading-relaxed list-none pl-0">
+              <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
                 {[
                   "There was no single place to understand progress. Status was scattered across emails, CSM spreadsheets, and Slack.",
                   "Entry points like Sales handoffs, bulk uploads, NPI flows, and EHR integrations all behaved differently, with no shared language.",
@@ -133,7 +133,7 @@ export default function ZocdocPage() {
               <Heading as="h3" level={3} variant="h3">
                 For internal teams
               </Heading>
-              <ul className="space-y-2 text-muted-foreground text-base leading-relaxed list-none pl-0">
+              <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
                 {[
                   "Ops relied on manual spreadsheets and ad hoc check-ins to keep things moving.",
                   "Product teams kept adding new onboarding flows without a shared model, increasing fragmentation.",
@@ -166,7 +166,7 @@ export default function ZocdocPage() {
             <Text muted>
               Fixing a single flow would address the most visible issues. Redesigning the system would:
             </Text>
-            <ul className="space-y-2 text-muted-foreground text-base leading-relaxed list-none pl-0">
+            <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
               {[
                 "Create a shared understanding of what onboarding is — including its core entities, states, and transitions.",
                 "Make onboarding measurable so we could identify drop-offs and prioritize based on real impact.",
@@ -196,7 +196,7 @@ export default function ZocdocPage() {
               product and engineering partners to map system constraints and data models.
             </Text>
             <Text muted>Key findings that shaped the design:</Text>
-            <ul className="space-y-2 text-muted-foreground text-base leading-relaxed list-none pl-0">
+            <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
               {[
                 "Staff weren't struggling with the interface. They were unsure what to do next or who owned the step.",
                 "Enterprise admins needed a management view, not another task list. They were coordinating across teams, locations, and specialties.",
@@ -221,7 +221,7 @@ export default function ZocdocPage() {
               <Text muted>
                 Before designing screens, I defined the core model that everything would follow.
               </Text>
-              <ul className="space-y-2 text-muted-foreground text-base leading-relaxed list-none pl-0">
+              <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
                 {[
                   "Entities: Organization → Locations → Providers → Tasks (a smart grouping and hierarchy, not a flat list)",
                   "State model per entity: Not started → In progress → Blocked → Pending review → Live",
@@ -422,7 +422,7 @@ export default function ZocdocPage() {
 
             <div className="space-y-4">
               <Heading as="h3" level={3} variant="h3">Shipped</Heading>
-              <ul className="space-y-2 text-muted-foreground text-base leading-relaxed list-none pl-0">
+              <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
                 {[
                   "Enterprise Home rolled out to 13 enterprise accounts in March 2026",
                   "Guided staff onboarding flows launched to 50% of practices with < 15 providers",

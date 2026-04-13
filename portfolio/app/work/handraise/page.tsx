@@ -69,7 +69,7 @@ function CompareTable({
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="space-y-2 list-none pl-0 text-muted-foreground text-base leading-relaxed">
+    <ul className="space-y-2 list-none pl-0 text-muted-foreground text-lg leading-[1.7]">
       {items.map((item) => (
         <li key={item} className="flex gap-3">
           <span className="mt-[0.4em] h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/50" aria-hidden />

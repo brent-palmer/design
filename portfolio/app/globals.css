@@ -21,6 +21,7 @@
   --color-foreground: var(--foreground);
   --color-muted-foreground: var(--muted-foreground);
   --max-width-content: 800px;
+  --max-width-reading: 42rem;
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --font-heading: 'PS Times Trial', Georgia, serif;

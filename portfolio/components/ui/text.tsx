@@ -9,8 +9,8 @@ type TextProps = {
 
 const sizeClasses: Record<TextSize, string> = {
   sm: "text-sm leading-relaxed",
-  base: "text-base leading-relaxed",
-  lg: "text-lg leading-relaxed",
+  base: "text-lg leading-[1.7]",
+  lg: "text-lg leading-[1.7]",
 };
 
 export function Text({
