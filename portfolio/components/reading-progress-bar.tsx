@@ -52,7 +52,7 @@ export function ReadingProgressBar() {
   return (
     <div
       aria-hidden
-      className="pointer-events-none fixed left-0 top-0 z-50 h-[4px] w-full"
+      className="pointer-events-none fixed left-0 top-0 z-50 h-[2px] w-full"
       style={{
         transform: out ? "translateY(-100%)" : "translateY(0)",
         opacity: active ? 1 : 0,

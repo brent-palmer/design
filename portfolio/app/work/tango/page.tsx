@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LightboxImage } from "@/components/lightbox-image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -11,19 +12,6 @@ export const metadata: Metadata = {
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
-
-function PlaceholderImage({ label }: { label?: string }) {
-  return (
-    <div className="space-y-3">
-      <div className="aspect-[16/9] w-full bg-foreground/[0.06]" aria-hidden />
-      {label && (
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          {label}
-        </p>
-      )}
-    </div>
-  );
-}
 
 function Quote({ children }: { children: React.ReactNode }) {
   return (
@@ -91,7 +79,12 @@ export default function TangoPage() {
               <span>Lead Product Designer</span>
             </div>
           </div>
-          <PlaceholderImage label="Tango — automated process documentation" />
+          <LightboxImage
+            src="/tango/editing-hero.avif"
+            alt="Tango guide editor with steps and inline content"
+            caption="Tango — automated process documentation"
+            priority
+          />
         </Container>
       </Section>
 
@@ -105,7 +98,7 @@ export default function TangoPage() {
             <Text muted>
               Process documentation was slow, inconsistent, and often avoided. I led design for
               Tango's editing and sharing experience, reframing the product from a simple recorder
-              into a structured, PLG system.
+              into a structured, enablement system.
             </Text>
             <Text muted>
               In 5 weeks, guide creation time dropped from ~10 minutes to under 1 minute. The new
@@ -118,7 +111,7 @@ export default function TangoPage() {
           <section className="space-y-6">
             <Heading as="h2" level={2} variant="h2">Problem</Heading>
             <Text muted>
-              Teams with high turnover and repeatable workflows — sales, support, ops — had a
+              Teams with high turnover and repeatable workflows like sales, support, and ops had a
               documentation problem no one had solved well. Creating a single guide meant taking
               screenshots at every step, cropping, annotating, and ordering them, writing
               instructions from scratch, then sharing via Slack or email with no version control or
@@ -134,7 +127,11 @@ export default function TangoPage() {
               But it felt like a feature, not a product. There was no structure, no sharing model,
               and no reason to return.
             </Text>
-            <PlaceholderImage label="Before Tango — screenshot, annotate, paste, repeat" />
+            <LightboxImage
+              src="/tango/old%20way2.avif"
+              alt="Manual internal wiki with long lists of doc links—the workflow before guided steps"
+              caption="Before Tango — screenshot, annotate, paste, repeat"
+            />
           </section>
 
           {/* Sprint */}
@@ -183,7 +180,11 @@ export default function TangoPage() {
                 This framing clarified the product's job and created a natural growth loop: capture
                 once, share widely, update as the process evolves.
               </Text>
-              <PlaceholderImage label="System diagram — capture, guide, share flow" />
+              <LightboxImage
+                src="/tango/north%20star.avif"
+                alt="Capture, Polish, Share—three-step system diagram"
+                caption="System diagram — capture, guide, share flow"
+              />
             </div>
 
             {/* Editor */}
@@ -199,9 +200,10 @@ export default function TangoPage() {
                   <Text muted>
                     By default, guides are clean and read-only. A click enables inline editing.
                     Annotations and highlights are available, but only when a step is selected.
-                    Testing a persistent toolbar against a contextual one revealed that the
-                    contextual version kept the sense the guide was already done and just needed
-                    light refinement.
+                    I tested a persistent toolbar against a contextual one. The persistent version
+                    felt like a full document editor. The contextual version kept the sense that
+                    the guide was already done and just needed light refinement. That framing helped
+                    users move faster.
                   </Text>
                 </div>
                 <div className="space-y-2">
@@ -213,7 +215,11 @@ export default function TangoPage() {
                   </Text>
                 </div>
               </div>
-              <PlaceholderImage label="Editor — contextual toolbar, inline editing, annotation panel" />
+              <LightboxImage
+                src="/tango/editing-hero.avif"
+                alt="Tango guide editor—sidebar steps, drag and drop, and inline step preview"
+                caption="Editor — contextual toolbar, inline editing, annotation panel"
+              />
             </div>
 
             {/* Sharing */}
@@ -239,7 +245,11 @@ export default function TangoPage() {
                   </Text>
                 </div>
               </div>
-              <PlaceholderImage label="Shareable guide view — clean public-facing output" />
+              <LightboxImage
+                src="/tango/embed.avif"
+                alt="Embed flow—share guide into Notion and other platforms"
+                caption="Shareable guide view — clean public-facing output"
+              />
             </div>
 
             {/* PLG */}
@@ -266,7 +276,16 @@ export default function TangoPage() {
                   </Text>
                 </div>
               </div>
-              <PlaceholderImage label="PLG upgrade moment — contextual prompt at point of sharing" />
+              <LightboxImage
+                src="/tango/export.avif"
+                alt="Export gated behind Pro—upgrade prompt in the share and export flow"
+                caption="PLG upgrade moment — contextual prompt at point of sharing"
+              />
+              <LightboxImage
+                src="/tango/core%20view.avif"
+                alt="Team Library—guide cards, grid, and Share & export from the overflow menu"
+                caption="Core view — team library and share surfaces"
+              />
             </div>
           </section>
 
@@ -283,16 +302,27 @@ export default function TangoPage() {
                   title: "Intent-based grouping over click fidelity",
                   body: "Recording every click was accurate but unusable. We grouped actions by intent instead. Tradeoff: less granular detail. Outcome: outputs became clear and usable, not overwhelming.",
                 },
-                {
-                  title: "Individual-first, team-second",
-                  body: "Focused on solo value before building team features. Tradeoff: risk of needing to rework for collaboration later. Outcome: faster validation, with a sharing model designed to scale to teams.",
-                },
               ].map(({ title, body }) => (
                 <div key={title} className="space-y-2">
                   <Heading as="h3" level={3} variant="h3">{title}</Heading>
                   <Text muted>{body}</Text>
                 </div>
               ))}
+              <div className="space-y-8">
+                <div className="space-y-2">
+                  <Heading as="h3" level={3} variant="h3">Individual-first, team-second</Heading>
+                  <Text muted>
+                    Focused on solo value before building team features. Tradeoff: risk of needing to
+                    rework for collaboration later. Outcome: faster validation, with a sharing model
+                    designed to scale to teams.
+                  </Text>
+                </div>
+                <LightboxImage
+                  src="/tango/members.avif"
+                  alt="Workspace Members screen—roles, invites, and permission levels"
+                  caption="Members — workspace roles and admin access"
+                />
+              </div>
             </div>
           </section>
 
@@ -324,6 +354,37 @@ export default function TangoPage() {
               I lost count of how many 30-minute how-to meetings I had to set up with people. Death
               by 30-minute meetings. Now, I can just send a Tango, saving so much time and errors.
             </Quote>
+          </section>
+
+          {/* What I Learned */}
+          <section className="space-y-8">
+            <Heading as="h2" level={2} variant="h2">What I Learned</Heading>
+            <div className="space-y-8">
+              <div className="space-y-2">
+                <Heading as="h3" level={3} variant="h3">Naming the right job to be done unlocked everything</Heading>
+                <Text muted>
+                  "Documentation" implied effort. "Your guide is already done" changed the product.
+                  That shift shaped capture, editing, and the growth loop. Getting the framing right
+                  early had the biggest impact.
+                </Text>
+              </div>
+              <div className="space-y-2">
+                <Heading as="h3" level={3} variant="h3">Speed comes from deliberate constraints</Heading>
+                <Text muted>
+                  Five weeks was enough because we cut aggressively. No team features, no mobile, no
+                  integrations. Every omission was intentional. That focus made the work shippable
+                  and the signal clear.
+                </Text>
+              </div>
+              <div className="space-y-2">
+                <Heading as="h3" level={3} variant="h3">What I'd do differently</Heading>
+                <Text muted>
+                  I'd invest in the sharing experience earlier. Most of the sprint focused on capture
+                  and editing. The consumption side came late and wasn't deeply tested. Earlier work
+                  there would have strengthened the overall product.
+                </Text>
+              </div>
+            </div>
           </section>
 
         </Container>
