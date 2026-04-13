@@ -1,5 +1,6 @@
 import { ButtonLink } from "@/components/ui/button";
 import { CopyEmailButton } from "@/components/copy-email-button";
+import { HeroParticles } from "@/components/hero-particles";
 import { ProjectRow } from "@/components/project-row";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -12,8 +13,9 @@ export default function Home() {
 
   return (
     <>
-      <Section className="pb-12 sm:pb-16">
-        <Container className="space-y-10">
+      <Section className="relative overflow-hidden pb-12 sm:pb-16">
+        <HeroParticles />
+        <Container className="relative z-10 space-y-10">
           <div className="space-y-4">
             <Heading level={4} variant="eyebrow">
               Hi, I'm Brent.
