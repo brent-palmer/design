@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LightboxImage } from "@/components/lightbox-image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -12,19 +13,6 @@ export const metadata: Metadata = {
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
-
-function PlaceholderImage({ label }: { label?: string }) {
-  return (
-    <div className="space-y-3">
-      <div className="aspect-[16/9] w-full bg-foreground/[0.06]" aria-hidden />
-      {label && (
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          {label}
-        </p>
-      )}
-    </div>
-  );
-}
 
 function Quote({ children }: { children: React.ReactNode }) {
   return (
@@ -79,7 +67,12 @@ export default function ZocdocPage() {
               <span>Principal Product Designer</span>
             </div>
           </div>
-          <PlaceholderImage label="Provider onboarding — enterprise home" />
+          <LightboxImage
+            src="/zocdoc/hero.avif"
+            alt="Zocdoc enterprise home — provider onboarding"
+            caption="Provider onboarding — enterprise home"
+            priority
+          />
         </Container>
       </Section>
 
@@ -152,15 +145,18 @@ export default function ZocdocPage() {
               It also limited our ability to scale to larger, more complex enterprise customers.
             </Text>
 
-            <PlaceholderImage label="Onboarding journey map — single practice" />
+            <LightboxImage
+              src="/zocdoc/journey-map.avif"
+              alt="Onboarding journey map for a single practice"
+              caption="Onboarding journey map — single practice"
+            />
           </section>
 
           {/* Reframe */}
           <section className="space-y-6">
             <Heading as="h2" level={2} variant="h2">Reframe</Heading>
             <Text muted>
-              The first thing I challenged was the framing. The brief was to "improve the
-              onboarding flow." I pushed us to go deeper and design the onboarding{" "}
+            The first thing I challenged was the framing. The brief was to “improve the onboarding flow.” I pushed us to go deeper and rethink the{" "}
               <em>system</em>.
             </Text>
             <Text muted>
@@ -183,7 +179,11 @@ export default function ZocdocPage() {
               It defined the scope, the artifacts we created, and how we aligned with product
               and engineering.
             </Text>
-            <PlaceholderImage label="System reframe — from flow to model" />
+            <LightboxImage
+              src="/zocdoc/model.avif"
+              alt="System reframe — from disconnected flows to a single onboarding model"
+              caption="System reframe — from flow to model"
+            />
           </section>
 
           {/* Discovery */}
@@ -213,30 +213,29 @@ export default function ZocdocPage() {
 
           {/* What I Designed */}
           <section className="space-y-12">
-            <Heading as="h2" level={2} variant="h2">What I Designed</Heading>
+            <Heading as="h2" level={2} variant="h2">What I designed</Heading>
 
             {/* System model */}
             <div className="space-y-6">
               <Heading as="h3" level={3} variant="h3">The system model</Heading>
               <Text muted>
-                Before designing screens, I defined the core model that everything would follow.
+                Before designing screens, I defined the core model that everything would follow:
               </Text>
               <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
                 {[
-                  "Entities: Organization → Locations → Providers → Tasks (a smart grouping and hierarchy, not a flat list)",
-                  "State model per entity: Not started → In progress → Blocked → Pending review → Live",
-                  "Ownership model: every task clearly assigned to Zocdoc or the practice so it's obvious who moves it forward",
-                ].map((item) => (
-                  <li key={item} className="flex gap-3">
+                  { label: "Prototype 1", href: "https://intro-path-progress.lovable.app", text: "Entities: Practice → Locations → Providers → Tasks (a smart grouping and hierarchy, not a flat list)" },
+                  { label: "Prototype 2", href: "https://step-by-step-mate.lovable.app", text: "State model per entity: Not started → In progress → Blocked → Pending review → Live" },
+                  { label: "Prototype 3", href: "https://onboard-buddy-station.lovable.app", text: "Ownership model: every task clearly assigned to Zocdoc or the practice so it's obvious who moves it forward" },
+                ].map(({ label, href, text }) => (
+                  <li key={label} className="flex gap-3">
                     <span className="mt-[0.4em] h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/50" aria-hidden />
-                    {item}
+                    <span><a href={href} target="_blank" rel="noopener noreferrer" className="text-foreground underline underline-offset-2 hover:text-muted-foreground transition-colors">{label}</a>: {text}</span>
                   </li>
                 ))}
               </ul>
               <Text muted>
-                This became a shared language across design, engineering, and ops. It also made
-                instrumentation straightforward — we knew what to track, where users were getting
-                stuck, and what each drop-off represented.
+                This made instrumentation straightforward early on. We knew what to track, where
+                users were getting stuck, and what each drop-off represented.
               </Text>
             </div>
 
@@ -274,16 +273,8 @@ export default function ZocdocPage() {
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Hierarchy as navigation</Heading>
                   <Text muted>
-                    Organization → Locations → Providers. Supports both high-level oversight
+                    Integrations → Locations → Providers. Supports both high-level oversight
                     and drill-down without losing context. Flat lists and timelines failed in testing.
-                  </Text>
-                </div>
-                <div className="space-y-2">
-                  <Heading as="h4" level={4} variant="h4">Status first, actions second</Heading>
-                  <Text muted>
-                    The view surfaces system status, not tasks. Clear indicators show where
-                    things are blocked so admins can act or delegate. Designed with shape, color,
-                    and labels for accessibility.
                   </Text>
                 </div>
                 <div className="space-y-2">
@@ -313,7 +304,11 @@ export default function ZocdocPage() {
                 leaving gaps.
               </Text>
 
-              <PlaceholderImage label="Enterprise Home — v3" />
+              <LightboxImage
+                src="/zocdoc/home-post-activation.avif"
+                alt="Zocdoc enterprise Home — post-activation dashboard"
+                caption="Enterprise Home — v3"
+              />
             </div>
 
             {/* Surface 2 */}
@@ -330,8 +325,7 @@ export default function ZocdocPage() {
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Group tasks by how staff think</Heading>
                   <Text muted>
-                    Moved from system-based groupings to workflow-based ones like "Set up
-                    providers," "Configure scheduling," and "Confirm insurance." This reduced
+                    Moved from system-based groupings to workflow-based ones like "Add providers," "Configure availability," and "Set accepted insurance." This reduced
                     drop-off in testing.
                   </Text>
                 </div>
@@ -345,13 +339,17 @@ export default function ZocdocPage() {
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Keep the main path simple</Heading>
                   <Text muted>
-                    Progressive disclosure for edge cases. The core flow stays clean while still
+                    Progressive disclosure with expanding step details. The core flow stays clean while still
                     supporting more complex scenarios.
                   </Text>
                 </div>
               </div>
 
-              <PlaceholderImage label="Get Started — staff checklist" />
+              <LightboxImage
+                src="/zocdoc/get-started.avif"
+                alt="Get Started — staff onboarding checklist"
+                caption="Get Started — staff checklist"
+              />
             </div>
 
             {/* Surface 3 */}
@@ -381,43 +379,14 @@ export default function ZocdocPage() {
                 </div>
               </div>
 
-              <PlaceholderImage label="Bulk NPI — provider add flow" />
+              <LightboxImage
+                src="/zocdoc/bulk-npi.avif"
+                alt="Bulk NPI — preview before commit for provider add"
+                caption="Bulk NPI — provider add flow"
+              />
             </div>
           </section>
 
-          {/* Design artifacts */}
-          <section className="space-y-8">
-            <Heading as="h2" level={2} variant="h2">Design artifacts &amp; alignment</Heading>
-            <Text muted>
-              To align PM, engineering, and execs across a complex, multi-surface effort, I created:
-            </Text>
-            <div className="space-y-8">
-              {[
-                {
-                  title: "End-to-end journey maps",
-                  body: "Three personas: provider, practice admin, and enterprise admin. Each map highlights pain points and system gaps. Used in cross-functional workshops to build shared understanding.",
-                },
-                {
-                  title: "Service blueprints",
-                  body: "Connected UI flows to backend ops and data systems. Clarified what engineering needed to build versus what ops would continue to handle.",
-                },
-                {
-                  title: "Interaction patterns library",
-                  body: "Defined reusable patterns for tasks, statuses, and alerts. Gave teams a consistent foundation for future onboarding work.",
-                },
-                {
-                  title: "Prototypes at two fidelity levels",
-                  body: "Narrative storyboards for early alignment and testing, and high-fidelity clickable flows for usability testing and engineering handoff.",
-                },
-              ].map(({ title, body }) => (
-                <div key={title} className="space-y-2">
-                  <Heading as="h3" level={3} variant="h3">{title}</Heading>
-                  <Text muted>{body}</Text>
-                </div>
-              ))}
-            </div>
-            <PlaceholderImage label="Design artifacts — journey map, service blueprint, patterns library" />
-          </section>
 
           {/* Key decisions */}
           <section className="space-y-8">

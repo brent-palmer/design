@@ -36,7 +36,6 @@ export function SiteFooter() {
             </svg>
             Resume
           </a>
-          <CopyEmailButton className="text-sm text-muted-foreground transition-colors hover:text-foreground" />
         </nav>
       </Container>
     </footer>

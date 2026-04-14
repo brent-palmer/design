@@ -8,7 +8,7 @@ import { Text } from "@/components/ui/text";
 
 export const metadata: Metadata = {
   title: "Samepage",
-  description: "AI that does the structural thinking so PMs don't have to.",
+  description: "From scattered inputs to structured updates.",
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -72,7 +72,7 @@ export default function SamepagePage() {
               Samepage
             </Heading>
             <Text muted size="lg" className="max-w-2xl">
-              AI that does the structural thinking so PMs don't have to
+              From scattered inputs to structured updates
             </Text>
             <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
               <span>2025</span>

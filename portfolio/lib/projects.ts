@@ -33,13 +33,13 @@ export const projects: Project[] = [
   {
     slug: "samepage",
     title: "Samepage",
-    tagline: "AI that does the structural thinking so PMs don't have to",
+    tagline: "From scattered inputs to structured updates",
     year: "2025",
     role: "Lead Product Designer",
     featured: true,
     summary:
       "Samepage is a platform that helps project managers and teams collaborate more effectively.",
-      cover: "/globe.svg",
+      cover: "/samepage/hero.avif",
     problem:
       "Project managers and teams were struggling to collaborate effectively.",
     approach:
