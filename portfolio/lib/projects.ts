@@ -22,7 +22,7 @@ export const projects: Project[] = [
     featured: true,
     summary:
       "Zocdoc's provider onboarding was fragmented, with disconnected flows and manual work slowing enterprise go-lives and straining ops. I designed a unified onboarding system — a new enterprise Home, guided tasks for staff, and a bulk NPI tool — giving practices a single source of truth.",
-    cover: "/globe.svg",
+    cover: "/zocdoc/hero.avif",
     problem:
       "Teams relied on static weekly PDFs and ad-hoc SQL requests, slowing decisions during peak season.",
     approach:

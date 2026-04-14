@@ -70,7 +70,7 @@ export function ProjectRow({ project }: { project: Project }) {
       <div
         ref={previewRef}
         aria-hidden="true"
-        className={`pointer-events-none absolute right-[60px] top-1/2 z-[1] hidden w-[30%] overflow-hidden rounded-lg xl:block [aspect-ratio:3/2] [backface-visibility:hidden] [transition:opacity_0.2s,visibility_0.2s,transform_0.2s] will-change-transform ${
+        className={`pointer-events-none absolute right-[60px] top-1/2 z-[1] hidden w-[40%] overflow-hidden rounded-lg xl:block [aspect-ratio:3/2] [backface-visibility:hidden] [transition:opacity_0.2s,visibility_0.2s,transform_0.2s] will-change-transform ${
           hovered
             ? "visible opacity-100 [transform:translateY(-50%)]"
             : "invisible opacity-0 [transform:translateY(-50%)_scale(0.9)]"
