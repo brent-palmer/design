@@ -154,11 +154,11 @@ export default function SamepagePage() {
 
           {/* What I Designed */}
           <section className="space-y-12">
-            <Heading as="h2" level={2} variant="h2">What I Designed</Heading>
+            <Heading as="h2" level={2} variant="h2">What I designed</Heading>
 
             {/* Work brain */}
             <div className="space-y-6">
-              <Heading as="h3" level={3} variant="h3">Connecting your tools and building the "work brain"</Heading>
+              <Heading as="h3" level={3} variant="h3">Connecting your work tools to AI</Heading>
               <Text muted>
                 Before designing screens, I defined the core model:
               </Text>
