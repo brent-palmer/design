@@ -9,11 +9,12 @@ export function Container<T extends ElementType = "div">({
   className = "",
   ...props
 }: ContainerProps<T> & { as?: T }) {
-  const Component = (as ?? "div") as ElementType;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const Component = (as ?? "div") as any;
   return (
     <Component
       className={`max-w-reading mx-auto px-6 sm:px-8 ${className}`.trim()}
-      {...props}
+      {...(props as Record<string, unknown>)}
     />
   );
 }
