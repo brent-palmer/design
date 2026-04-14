@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LightboxImage } from "@/components/lightbox-image";
+import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -9,6 +10,25 @@ import { Text } from "@/components/ui/text";
 export const metadata: Metadata = {
   title: "Tango",
   description: "How-to guides that create themselves.",
+  openGraph: {
+    title: "Tango — Brent Palmer",
+    description: "How-to guides that create themselves.",
+    url: "/work/tango",
+    type: "article",
+  },
+};
+
+const caseStudySchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Tango — Brent Palmer",
+  description: "How-to guides that create themselves.",
+  url: "https://design-nu-ten.vercel.app/work/tango",
+  author: {
+    "@type": "Person",
+    name: "Brent Palmer",
+    url: "https://design-nu-ten.vercel.app",
+  },
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -56,6 +76,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function TangoPage() {
   return (
     <div data-reading-content>
+      <JsonLd data={caseStudySchema} />
       {/* Hero */}
       <Section className="pb-12 sm:pb-16">
         <Container className="space-y-12">

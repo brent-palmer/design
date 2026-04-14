@@ -1,0 +1,27 @@
+# Brent Palmer — Product Designer
+
+Brent Palmer is a product designer specializing in B2B SaaS, AI workflows, and enterprise systems.
+
+## About
+
+Product designer with experience leading design for complex, multi-sided platforms and AI-native tools. Based in the United States.
+
+## Portfolio
+
+- Homepage: /
+- Work index: /work
+- About: /about
+
+## Case studies
+
+- Zocdoc (/work/zocdoc): Designing onboarding for large, multi-location medical practices. Led the system model, onboarding flow, and dashboard design.
+- Samepage (/work/samepage): From scattered inputs to structured updates. Designed an AI-powered status update system connecting work tools to structured communication.
+- Tango (/work/tango): How-to guides that create themselves. Led design for the guide editor and sharing experience, reducing creation time from ~10 minutes to under 1 minute.
+- Handraise (/work/handraise): Turning earned media into owned reach. Designed the lead capture and audience growth product.
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/brentpalmerdesign/
+- GitHub: https://github.com/brent-palmer
+- X / Twitter: https://x.com/palmer_bre50981
+- Figma: https://figma.com/@Brent

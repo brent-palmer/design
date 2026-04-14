@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LightboxImage } from "@/components/lightbox-image";
+import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -9,6 +10,25 @@ import { Text } from "@/components/ui/text";
 export const metadata: Metadata = {
   title: "Samepage",
   description: "From scattered inputs to structured updates.",
+  openGraph: {
+    title: "Samepage — Brent Palmer",
+    description: "From scattered inputs to structured updates.",
+    url: "/work/samepage",
+    type: "article",
+  },
+};
+
+const caseStudySchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Samepage — Brent Palmer",
+  description: "From scattered inputs to structured updates.",
+  url: "https://design-nu-ten.vercel.app/work/samepage",
+  author: {
+    "@type": "Person",
+    name: "Brent Palmer",
+    url: "https://design-nu-ten.vercel.app",
+  },
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -56,6 +76,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function SamepagePage() {
   return (
     <div data-reading-content>
+      <JsonLd data={caseStudySchema} />
       {/* Hero */}
       <Section className="pb-12 sm:pb-16">
         <Container className="space-y-12">

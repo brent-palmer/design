@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { LightboxImage } from "@/components/lightbox-image";
+import { JsonLd } from "@/components/json-ld";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
@@ -9,6 +10,25 @@ import { Text } from "@/components/ui/text";
 export const metadata: Metadata = {
   title: "Handraise",
   description: "Turning earned media into owned reach.",
+  openGraph: {
+    title: "Handraise — Brent Palmer",
+    description: "Turning earned media into owned reach.",
+    url: "/work/handraise",
+    type: "article",
+  },
+};
+
+const caseStudySchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Handraise — Brent Palmer",
+  description: "Turning earned media into owned reach.",
+  url: "https://design-nu-ten.vercel.app/work/handraise",
+  author: {
+    "@type": "Person",
+    name: "Brent Palmer",
+    url: "https://design-nu-ten.vercel.app",
+  },
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -85,6 +105,7 @@ function BulletList({ items }: { items: string[] }) {
 export default function HandraisePage() {
   return (
     <div data-reading-content>
+      <JsonLd data={caseStudySchema} />
       {/* Hero */}
       <Section className="pb-12 sm:pb-16">
         <Container className="space-y-12">

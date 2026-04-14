@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LightboxImage } from "@/components/lightbox-image";
+import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -8,8 +9,26 @@ import { Text } from "@/components/ui/text";
 
 export const metadata: Metadata = {
   title: "Zocdoc",
-  description:
-    "Making onboarding work for large, multi-location practices.",
+  description: "Making onboarding work for large, multi-location practices.",
+  openGraph: {
+    title: "Zocdoc — Brent Palmer",
+    description: "Making onboarding work for large, multi-location practices.",
+    url: "/work/zocdoc",
+    type: "article",
+  },
+};
+
+const caseStudySchema = {
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  name: "Zocdoc — Brent Palmer",
+  description: "Making onboarding work for large, multi-location practices.",
+  url: "https://design-nu-ten.vercel.app/work/zocdoc",
+  author: {
+    "@type": "Person",
+    name: "Brent Palmer",
+    url: "https://design-nu-ten.vercel.app",
+  },
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -44,6 +63,7 @@ function CaseTable({ rows }: { rows: [string, React.ReactNode][] }) {
 export default function ZocdocPage() {
   return (
     <div data-reading-content>
+      <JsonLd data={caseStudySchema} />
       {/* Hero */}
       <Section className="pb-12 sm:pb-16">
         <Container className="space-y-12">

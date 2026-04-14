@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ui/button";
 import { CopyEmailButton } from "@/components/copy-email-button";
 import { HeroParticles } from "@/components/hero-particles";
@@ -7,6 +8,18 @@ import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
 import { getFeaturedProjects } from "@/lib/projects";
+
+export const metadata: Metadata = {
+  title: "Brent Palmer — Product Designer",
+  description:
+    "Portfolio of Brent Palmer, a product designer specializing in B2B SaaS, AI workflows, and enterprise systems.",
+  openGraph: {
+    title: "Brent Palmer — Product Designer",
+    description:
+      "Portfolio of Brent Palmer, a product designer specializing in B2B SaaS, AI workflows, and enterprise systems.",
+    url: "/",
+  },
+};
 
 export default function Home() {
   const featured = getFeaturedProjects();
