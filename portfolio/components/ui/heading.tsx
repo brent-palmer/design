@@ -40,14 +40,15 @@ export function Heading<T extends ElementType = "h1">({
   className = "",
   ...props
 }: HeadingProps<T>) {
-  const Tag = (as ?? (`h${level}` as const)) as ElementType;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const Tag = (as ?? (`h${level}` as const)) as any;
   const resolvedVariant =
     variant ??
     (level === 1 ? "display" : level === 2 || level === 4 ? "title" : "label");
   return (
     <Tag
       className={`${variantClasses[resolvedVariant]} ${className}`.trim()}
-      {...props}
+      {...(props as Record<string, unknown>)}
     />
   );
 }
