@@ -8,7 +8,7 @@ import { Text } from "@/components/ui/text";
 
 export const metadata: Metadata = {
   title: "Tango",
-  description: "How-to guides that create themselves as you do the work.",
+  description: "How-to guides that create themselves.",
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -72,7 +72,7 @@ export default function TangoPage() {
               Tango
             </Heading>
             <Text muted size="lg" className="max-w-2xl">
-              How-to guides that create themselves as you do the work
+              How-to guides that create themselves
             </Text>
             <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
               <span>2024</span>

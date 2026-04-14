@@ -8,7 +8,7 @@ import { Text } from "@/components/ui/text";
 
 export const metadata: Metadata = {
   title: "Handraise",
-  description: "Discovering the right product by building the wrong one first.",
+  description: "Turning earned media into owned reach.",
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -102,7 +102,7 @@ export default function HandraisePage() {
                 Handraise
               </Heading>
               <Text muted size="lg" className="max-w-2xl">
-                Discovering the right product by building the wrong one first
+                Turning earned media into owned reach
               </Text>
               <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 <span>2024</span>

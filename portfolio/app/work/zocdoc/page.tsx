@@ -8,7 +8,7 @@ import { Text } from "@/components/ui/text";
 export const metadata: Metadata = {
   title: "Zocdoc",
   description:
-    "Designing the system that made onboarding for healthcare practices possible.",
+    "Making onboarding work for large, multi-location practices.",
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
@@ -72,7 +72,7 @@ export default function ZocdocPage() {
               Zocdoc
             </Heading>
             <Text muted size="lg" className="max-w-2xl">
-              Designing the system that made onboarding for healthcare practices possible
+              Designing the onboarding journey for large healthcare practices
             </Text>
             <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
               <span>Q1 2026</span>
@@ -244,12 +244,31 @@ export default function ZocdocPage() {
             <div className="space-y-8">
               <Heading as="h3" level={3} variant="h3">Surface 1 — Enterprise Home</Heading>
               <Text muted>
-                Home became the centerpiece: a management dashboard that gives enterprise
-                admins a system-level view. Admins were managing dozens to hundreds of providers
-                across locations and specialties. A flat task list didn't scale. A dense table
-                wasn't actionable. The interface needed to show urgency and orientation at the
-                same time.
+                Home became the centerpiece: a cockpit that gives enterprise admins a clear,
+                system-level view of their entire practice. Admins were managing dozens to hundreds
+                of providers across locations and specialties. A flat task list didn't scale. A
+                dense table wasn't actionable. The interface needed to answer, at a glance: are we
+                performing, are we set up correctly, and what needs attention right now?
               </Text>
+
+              <div className="space-y-4">
+                <Heading as="h4" level={4} variant="h4">What Home answers instantly</Heading>
+                <ul className="space-y-2 list-none pl-0 text-muted-foreground text-lg leading-[1.7]">
+                  {[
+                    "Are bookings up or down this month?",
+                    "Is anything broken or blocking appointments?",
+                    "Which providers or locations need attention?",
+                    "Are all providers live, mapped, and accepting patients?",
+                    "Are our channels and integrations working as expected?",
+                    "Where are we leaving growth on the table?",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-[0.4em] h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/50" aria-hidden />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
               <div className="space-y-8">
                 <div className="space-y-2">
@@ -268,6 +287,15 @@ export default function ZocdocPage() {
                   </Text>
                 </div>
                 <div className="space-y-2">
+                  <Heading as="h4" level={4} variant="h4">From tasks to system health</Heading>
+                  <Text muted>
+                    Shifted the mental model from "what do I need to do" to "what's happening
+                    across my system." Account Health highlights urgent issues like missing
+                    availability, broken integrations, and misconfigured insurance. Insights
+                    surfaces optional optimizations — expand hours, improve profiles, adjust spend.
+                  </Text>
+                </div>
+                <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">A shared rally point</Heading>
                   <Text muted>
                     A single source of truth for CSMs, ops, and admins. Built to be easy to
@@ -275,6 +303,15 @@ export default function ZocdocPage() {
                   </Text>
                 </div>
               </div>
+
+              <Text muted>
+                The layout uses a single-column, scrollable structure to maintain narrative flow,
+                with clear section breaks to manage density. High-signal metrics are surfaced first,
+                with supporting context progressively disclosed. Status indicators rely on more than
+                color alone — iconography and labels ensure clarity at a glance. Empty states are
+                intentional and reassuring, reinforcing when the system is healthy rather than
+                leaving gaps.
+              </Text>
 
               <PlaceholderImage label="Enterprise Home — v3" />
             </div>

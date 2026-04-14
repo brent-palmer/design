@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     slug: "zocdoc",
     title: "Zocdoc",
-    tagline: "Designing the system that made onboarding for healthcare practices possible",
+    tagline: "Designing the onboarding journey for large practices",
     year: "2026",
     role: "Principal Product Designer",
     featured: true,
@@ -50,13 +50,13 @@ export const projects: Project[] = [
   {
     slug: "tango",
     title: "Tango",
-    tagline: "How-to guides that creates themselves as you do the work",
+    tagline: "How-to guides that create themselves",
     year: "2024",
     role: "Lead Product Designer",
     featured: true,
     summary:
       "Tango is a platform that helps project managers and teams collaborate more effectively.",
-      cover: "/globe.svg",
+      cover: "/tango/core view.avif",
     problem:
       "Project managers and teams were struggling to collaborate effectively.",
     approach:
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
     slug: "handraise",
     title: "Handraise",
-    tagline: "Discovering the right product by building the wrong one first",
+    tagline: "Turning earned media into owned reach",
     year: "2024",
     role: "Lead Product Designer",
     featured: false,

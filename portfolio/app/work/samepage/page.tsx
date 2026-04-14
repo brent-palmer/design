@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { LightboxImage } from "@/components/lightbox-image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
@@ -11,19 +12,6 @@ export const metadata: Metadata = {
 };
 
 // ─── Block components ────────────────────────────────────────────────────────
-
-function PlaceholderImage({ label }: { label?: string }) {
-  return (
-    <div className="space-y-3">
-      <div className="aspect-[16/9] w-full bg-foreground/[0.06]" aria-hidden />
-      {label && (
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-          {label}
-        </p>
-      )}
-    </div>
-  );
-}
 
 function Quote({ children }: { children: React.ReactNode }) {
   return (
@@ -91,7 +79,12 @@ export default function SamepagePage() {
               <span>Lead Product Designer</span>
             </div>
           </div>
-          <PlaceholderImage label="Samepage — AI-powered project updates" />
+          <LightboxImage
+            src="/samepage/hero.avif"
+            alt="Samepage product — AI-powered project updates"
+            caption="Samepage — AI-powered project updates"
+            priority
+          />
         </Container>
       </Section>
 
@@ -110,9 +103,9 @@ export default function SamepagePage() {
             <Text muted>
               I led design for Samepage, a 0–1 AI product that removes that translation work. PMs
               bring messy inputs — notes, tickets, raw context — and leave with structured,
-              audience-ready updates in under a minute. I defined the product vision, designed the
-              core AI interaction model, and shaped the go-to-market narrative. The product secured
-              9 pilot customers during my engagement.
+              audience-ready updates in under a minute. I defined the product direction, designed the
+              core AI interaction model, and shaped the go-to-market narrative. The product launch
+              secured 20+ customers and growing.
             </Text>
           </section>
 
@@ -122,19 +115,23 @@ export default function SamepagePage() {
             <Text muted>
               Most AI writing tools solve the wrong problem for PMs. The issue isn't writing speed.
               It's translation. Turning a week of work into something a mixed audience can understand
-              is a thinking problem, not a typing problem.
+              is a thinking problem, not a dictation problem.
             </Text>
             <Text muted>
               Existing tools start with a blank prompt and expect PMs to know what to ask for.
               That's the hard part. In practice, PMs rewrite the same updates across Notion, Slack,
-              and meetings — spending 3–4 hours a week on communication that should take 30 minutes.
+              and meetings — spending 3–4 hours a week on communication that should take minutes.
               Even then, teams stay misaligned because the format shifts and the signal gets lost.
             </Text>
             <Text muted>
               Samepage's thesis: PMs communicate better when the system handles the structure, not
               just the words.
             </Text>
-            <PlaceholderImage label="The core tension — messy inputs to structured stakeholder update" />
+            <LightboxImage
+              src="/samepage/problem.avif"
+              alt="The Samepage thesis — information asymmetry"
+              caption="The Samepage thesis — information asymmetry"
+            />
           </section>
 
           {/* My role */}
@@ -159,21 +156,34 @@ export default function SamepagePage() {
           <section className="space-y-12">
             <Heading as="h2" level={2} variant="h2">What I Designed</Heading>
 
-            {/* Signal over noise */}
+            {/* Work brain */}
             <div className="space-y-6">
-              <Heading as="h3" level={3} variant="h3">The "signal over noise" system</Heading>
+              <Heading as="h3" level={3} variant="h3">Connecting your tools and building the "work brain"</Heading>
               <Text muted>
-                Before designing screens, I defined the core model: raw PM materials flow into an
-                AI layer that structures, prioritizes, and adapts content based on audience and
-                context — producing audience-ready updates for execs, engineers, or cross-functional
-                teams.
+                Before designing screens, I defined the core model:
               </Text>
+              <ul className="space-y-2 list-none pl-0 text-muted-foreground text-lg leading-[1.7]">
+                {[
+                  "Inputs: Raw PM materials like notes, tickets, Slack threads, and Engineering issues",
+                  "AI layer: Structures, communication best practices, and dynamic content based on audience and context",
+                  "Outputs: Audience-ready updates for execs, engineers, or cross-functional teams",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-[0.4em] h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/50" aria-hidden />
+                    {item}
+                  </li>
+                ))}
+              </ul>
               <Text muted>
                 The key constraint: <strong>the AI handles structure, not just rewriting.</strong>{" "}
                 Rewriting clean paragraphs isn't useful. Turning messy inputs into a clear,
                 audience-appropriate narrative is the product.
               </Text>
-              <PlaceholderImage label="System model — inputs, AI layer, output types" />
+              <LightboxImage
+                src="/samepage/work-brain.avif"
+                alt="System model — inputs, AI layer, output types"
+                caption="System model — inputs, AI layer, output types"
+              />
             </div>
 
             {/* AI-generated updates */}
@@ -185,13 +195,20 @@ export default function SamepagePage() {
                 send, not something to clean up.
               </Text>
               <div className="space-y-8">
-                <div className="space-y-2">
-                  <Heading as="h4" level={4} variant="h4">Show the source</Heading>
-                  <Text muted>
-                    Every section includes lightweight source references so PMs can see where content
-                    came from. This added some UI complexity, but removed the "is this accurate?"
-                    hesitation we saw in early testing.
-                  </Text>
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <Heading as="h4" level={4} variant="h4">Show the source</Heading>
+                    <Text muted>
+                      Every section includes lightweight source references so PMs can see where content
+                      came from. This added some UI complexity, but removed the "is this accurate?"
+                      hesitation we saw in early testing.
+                    </Text>
+                  </div>
+                  <LightboxImage
+                    src="/samepage/sources.avif"
+                    alt="Update sections with lightweight source references"
+                    caption="Show the source — lightweight references per section"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Structure over freeform</Heading>
@@ -203,41 +220,61 @@ export default function SamepagePage() {
                   </Text>
                 </div>
               </div>
-              <PlaceholderImage label="AI-generated update — structured output with source annotations" />
+              <LightboxImage
+                src="/samepage/structure.avif"
+                alt="AI-generated update — structured output with sources"
+                caption="AI-generated update — structured output with sources"
+              />
             </div>
 
             {/* AI uncertainty */}
             <div className="space-y-8">
               <Heading as="h3" level={3} variant="h3">Designing for AI uncertainty</Heading>
               <div className="space-y-8">
-                <div className="space-y-2">
-                  <Heading as="h4" level={4} variant="h4">Latency</Heading>
-                  <Text muted>
-                    AI isn't instant. A spinner led to drop-off, so I replaced it with progressive
-                    reveal. Sections appear as they're generated, starting with title and status,
-                    then filling in detail. Users start reading right away, so it feels active,
-                    not blocked.
-                  </Text>
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <Heading as="h4" level={4} variant="h4">Latency</Heading>
+                    <Text muted>
+                      AI isn't instant. Blank pages and generic spinners led to drop-off, so I replaced it with progressive
+                      reveal. Sections appear as they're generated, starting with title and status,
+                      then filling in detail. Users start reading right away, so it feels active,
+                      not blocked.
+                    </Text>
+                  </div>
+                  <LightboxImage
+                    src="/samepage/loading.avif"
+                    alt="Latency — progressive reveal as sections stream in"
+                    caption="Latency — progressive reveal"
+                  />
                 </div>
-                <div className="space-y-2">
-                  <Heading as="h4" level={4} variant="h4">Bad outputs</Heading>
-                  <Text muted>
-                    Early results were often close, but wrong in subtle ways. A full regenerate
-                    wasn't helpful. I designed targeted edits instead — PMs can adjust a single
-                    section with feedback like "too technical" or "timeline is off." The AI updates
-                    that section and leaves the rest intact.
-                  </Text>
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <Heading as="h4" level={4} variant="h4">Bad outputs</Heading>
+                    <Text muted>
+                      Early results were often close, but off in subtle ways. A full regenerate
+                      wasn't helpful. I designed targeted edits instead. PMs can make simple text edits and the AI will update the rest.
+                    </Text>
+                  </div>
+                  <LightboxImage
+                    src="/samepage/text-editing.avif"
+                    alt="Bad outputs — targeted section edits with inline feedback"
+                    caption="Bad outputs — targeted section edits"
+                  />
                 </div>
-                <div className="space-y-2">
-                  <Heading as="h4" level={4} variant="h4">Confidence calibration</Heading>
-                  <Text muted>
-                    Some inputs were thin, which led to weaker outputs. I added a lightweight signal
-                    when context is limited, prompting users to add more detail. This set clearer
-                    expectations and improved output quality without adding friction.
-                  </Text>
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <Heading as="h4" level={4} variant="h4">Personalized prompts</Heading>
+                    <Text muted>
+                    As more updates were generated, the system became more tailored and began surfacing smarter prompts. This did two things: it reduced the time to create updates, and it improved structure and accuracy by learning from prior inputs.
+                    </Text>
+                  </div>
+                  <LightboxImage
+                    src="/samepage/prompt-explorations.avif"
+                    alt="Confidence calibration — limited context signal"
+                    caption="Confidence calibration — limited context signal"
+                  />
                 </div>
               </div>
-              <PlaceholderImage label="AI uncertainty states — progressive reveal, targeted edits, confidence signal" />
             </div>
 
             {/* Sidecar */}
@@ -255,36 +292,51 @@ export default function SamepagePage() {
                 standalone approaches on speed, trust, and repeat use.
               </Text>
               <div className="space-y-2">
-                <Heading as="h4" level={4} variant="h4">Craft detail</Heading>
                 <Text muted>
                   The sidecar uses tighter type and spacing than the main canvas to signal it's a
                   working space, not the final output. It can be pinned or dismissed and never takes
                   over the screen.
                 </Text>
               </div>
-              <PlaceholderImage label="Sidecar — source content alongside generated update" />
+              <LightboxImage
+                src="/samepage/copilot.avif"
+                alt="Sidecar — balancing manual editing vs global context"
+                caption="Sidecar — balancing manual editing vs global context"
+              />
             </div>
 
-            {/* Pages */}
+            {/* Read receipts */}
             <div className="space-y-8">
-              <Heading as="h3" level={3} variant="h3">Pages — a home for product communication</Heading>
+              <Heading as="h3" level={3} variant="h3">Read receipts — making updates stick</Heading>
               <Text muted>
-                Even when updates were clear, they had nowhere to live. They were shared in Slack
-                and lost, or buried in a Notion doc no one revisited. Pages solve this — a
-                persistent, shareable surface for product communication. Each page tracks a product
-                area over time, lives at a stable URL, and is built for async reading by stakeholders
-                catching up, not just those present in the moment.
+                As I dug deeper, another problem emerged. Even when updates were clear, there was
+                no signal they were actually read. Updates were sent into Slack or email and
+                disappeared into the stream. PMs had no idea who saw them, who missed them, or
+                when to follow up.
+              </Text>
+              <Text muted>
+                Read receipts address this directly. Every update shows who has viewed it and when,
+                turning communication from a one-way broadcast into something measurable. It creates
+                a lightweight layer of accountability without adding friction.
+              </Text>
+              <Text muted>
+                This shifts the goal of Samepage updates — not just making them easy to create, but
+                making sure they land. Teams can quickly spot gaps, follow up with the right people,
+                and build confidence that stakeholders are actually informed.
               </Text>
               <div className="space-y-2">
-                <Heading as="h4" level={4} variant="h4">Craft detail</Heading>
                 <Text muted>
-                  Pages use a reverse chronological layout with a sticky summary at the top, so
-                  current status is always visible. Older updates collapse to reduce noise but stay
-                  accessible. Branding is intentionally minimal so it reads like a product update,
-                  not a tool output.
+                  Read status is surfaced inline with each update, showing viewer names and
+                  timestamps. Unread states are clearly indicated, making it easy to scan for gaps.
+                  The UI stays minimal and unobtrusive so it supports the update without distracting
+                  from the content itself.
                 </Text>
               </div>
-              <PlaceholderImage label="Pages — persistent shareable product communication surface" />
+              <LightboxImage
+                src="/samepage/read-receipts.avif"
+                alt="Update view — read receipts with viewer list and timestamps"
+                caption="Update view — read receipts with viewer list and timestamps"
+              />
             </div>
           </section>
 
@@ -325,8 +377,8 @@ export default function SamepagePage() {
             <div className="space-y-4">
               <Heading as="h3" level={3} variant="h3">Shipped</Heading>
               <BulletList items={[
-                "9 pilot customers across FinTech, MarTech, and Productivity tools",
-                "Prototype and positioning narrative used directly in sales conversations",
+                "9 pilot customers across FinTech, MarTech, and Enterprise SaaS",
+                "Prototype and positioning narrative used directly in sales conversations with 20+ customers",
               ]} />
             </div>
 
@@ -334,9 +386,9 @@ export default function SamepagePage() {
               <Heading as="h3" level={3} variant="h3">Impact</Heading>
               <CaseTable
                 rows={[
-                  ["Update time", "Dropped from ~10–15 min to under 1 min across 58 PM sessions"],
-                  ["Repeat usage", "72% of users who created one update returned within a week"],
-                  ["Alignment", "81% of pilot stakeholders felt more informed about product progress"],
+                  ["Update time", "Dropped from ~10–15 min to under 1 min across 58 PM sessions (90% reduction)"],
+                  ["Repeat usage", "72% of users who created one update returned within a week (2x increase)"],
+                  ["Alignment", "81% of pilot stakeholders felt more informed about product progress (10x improvement)"],
                 ]}
               />
             </div>
@@ -346,6 +398,27 @@ export default function SamepagePage() {
               put me on the front foot instantly — 10x more effective than before. It's one of those
               rare products that actually gets better every single week.
             </Quote>
+          </section>
+
+          {/* What I Learned */}
+          <section className="space-y-8">
+            <Heading as="h2" level={2} variant="h2">What I Learned</Heading>
+            <div className="space-y-8">
+              <div className="space-y-2">
+                <Heading as="h3" level={3} variant="h3">Start with existing materials, not a blank canvas</Heading>
+                <Text muted>
+                  A text box assumes users already know what to ask. That's the hard part. Start
+                  with their existing materials, not a blank canvas.
+                </Text>
+              </div>
+              <div className="space-y-2">
+                <Heading as="h3" level={3} variant="h3">Presentation drives belief</Heading>
+                <Text muted>
+                  The same output felt more trustworthy in an editorial layout than in a dense tool
+                  UI. Presentation drives belief.
+                </Text>
+              </div>
+            </div>
           </section>
 
         </Container>
