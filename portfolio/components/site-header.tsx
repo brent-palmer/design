@@ -119,7 +119,7 @@ export function SiteHeader() {
               </Link>
             </span>
           ))}
-          <CopyEmailButton className="px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground" />
+          <CopyEmailButton className="hidden min-[701px]:inline-flex px-4 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground" />
         </nav>
       </Container>
     </header>
