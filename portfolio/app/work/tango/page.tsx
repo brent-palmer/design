@@ -97,7 +97,7 @@ export default function TangoPage() {
               How-to guides that create themselves
             </Text>
             <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              <span> Mar 2023</span>
+              <span>Mar 2023</span>
               <span>Lead Product Designer</span>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function TangoPage() {
             <Text muted>
               Process documentation was slow, inconsistent, and often avoided. I led design for
               Tango's editing and sharing experience, reframing the product from a simple recorder
-              into a structured, enablement system.
+              into a structured enablement system.
             </Text>
             <Text muted>
               In 5 weeks, guide creation time dropped from ~10 minutes to under 1 minute. The new
@@ -194,7 +194,7 @@ export default function TangoPage() {
               <Heading as="h3" level={3} variant="h3">The north star: Capture → Polish → Share</Heading>
               <Text muted>
                 Before designing screens, I defined the product's core growth model. Tango wasn't a
-                mouse clickrecorder. It was a workflow documentation and automation tool: capture user actions automatically in the background,
+                mouse click recorder. It was a workflow documentation and automation tool: capture user actions automatically in the background,
                 turn those actions into clear structured steps, then publish as a persistent
                 updatable link — not a file.
               </Text>
@@ -222,7 +222,7 @@ export default function TangoPage() {
                   <Text muted>
                     By default, guides are clean and read-only. A click enables inline editing.
                     Annotations and highlights are available, but only when a step is selected.
-                    Drag-and-drop table of contents allowed for rapid reordering of steps. The persistent version
+                    A drag-and-drop table of contents allowed for rapid reordering of steps. The persistent version
                     felt like a full document editor. The contextual version kept the sense that
                     the guide was already done and just needed light refinement. That framing helped
                     users move faster.

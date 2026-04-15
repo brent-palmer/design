@@ -186,7 +186,7 @@ export default function SamepagePage() {
               </Text>
               <ul className="space-y-2 list-none pl-0 text-muted-foreground text-lg leading-[1.7]">
                 {[
-                  "Inputs: Raw PM materials like notes, tickets, Slack threads, and Engineering issues",
+                  "Inputs: Raw PM materials like notes, tickets, Slack threads, and engineering issues",
                   "AI layer: Structures, communication best practices, and dynamic content based on audience and context",
                   "Outputs: Audience-ready updates for execs, engineers, or cross-functional teams",
                 ].map((item) => (

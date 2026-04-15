@@ -127,7 +127,7 @@ export default function HandraisePage() {
                 Turning earned media into owned reach
               </Text>
               <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                <span> Jan 2024</span>
+                <span>Jan 2024</span>
                 <span>Lead Product Designer</span>
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function HandraisePage() {
             <div className="space-y-8">
               <Heading as="h3" level={3} variant="h3">AI as infrastructure, not interface</Heading>
               <Text muted>
-                Most AI-generated social posts tools center on prompts and outputs. That model doesn't fit PR teams.
+                Most AI social post tools center on prompts and outputs. That model doesn't fit PR teams.
                 They don't think in prompts and shouldn't have to.
               </Text>
               <div className="space-y-8">
@@ -377,7 +377,7 @@ export default function HandraisePage() {
                 </div>
                 <div className="space-y-6">
                   <div className="space-y-2">
-                    <Heading as="h4" level={4} variant="h4">Iteration 3 — Lightweight reporting</Heading>
+                    <Heading as="h4" level={4} variant="h4">Iteration 3 — lightweight reporting</Heading>
                     <Text muted>
                       Shipped simple funnel tracking for social post conversions. Saw a small lift in
                       click-through rate. Creative quality drove most of the performance, with
