@@ -18,16 +18,17 @@ export const metadata: Metadata = {
   },
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://brentpalmer.design";
 const caseStudySchema = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   name: "Zocdoc — Brent Palmer",
   description: "Making onboarding work for large, multi-location practices.",
-  url: "https://design-nu-ten.vercel.app/work/zocdoc",
+  url: `${baseUrl}/work/zocdoc`,
   author: {
     "@type": "Person",
     name: "Brent Palmer",
-    url: "https://design-nu-ten.vercel.app",
+    url: baseUrl,
   },
 };
 

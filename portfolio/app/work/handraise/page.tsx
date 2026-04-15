@@ -18,16 +18,17 @@ export const metadata: Metadata = {
   },
 };
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://brentpalmer.design";
 const caseStudySchema = {
   "@context": "https://schema.org",
   "@type": "CreativeWork",
   name: "Handraise — Brent Palmer",
   description: "Turning earned media into owned reach.",
-  url: "https://design-nu-ten.vercel.app/work/handraise",
+  url: `${baseUrl}/work/handraise`,
   author: {
     "@type": "Person",
     name: "Brent Palmer",
-    url: "https://design-nu-ten.vercel.app",
+    url: baseUrl,
   },
 };
 
