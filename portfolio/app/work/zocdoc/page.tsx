@@ -475,6 +475,34 @@ export default function ZocdocPage() {
                 ]}
               />
             </div>
+
+            <div className="space-y-6">
+              <Heading as="h3" level={3} variant="h3">Enabling the team</Heading>
+              <Text muted>
+                Designing the bulk NPI flow and enterprise Home exposed a core issue: we were
+                relying on fake or static provider data to model highly variable, real-world scenarios.
+              </Text>
+              <Text muted>
+                To solve this, I built a lightweight MCP server that brought live NPI Registry data
+                into Claude Code. Designers and engineers could generate realistic provider profiles,
+                locations, and specialties directly in their prototypes. This made edge cases visible
+                early — especially around specialty mapping, location assignment, and incomplete
+                records — and reduced rework later in development.
+              </Text>
+              <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
+                {[
+                  "Replaced static data with real provider data from the NPI Registry",
+                  "Reduced time to create realistic prototypes from hours to minutes",
+                  "Surfaced edge cases earlier in the design process",
+                  "Turned messy API data into a consistent structure",
+                ].map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-[0.4em] h-1.5 w-1.5 shrink-0 rounded-full bg-muted-foreground/50" aria-hidden />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
 
         </Container>
