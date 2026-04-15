@@ -185,8 +185,8 @@ export default function ZocdocPage() {
             </Text>
             <ul className="space-y-2 text-muted-foreground text-lg leading-[1.7] list-none pl-0">
               {[
-                "Create a shared understanding of what onboarding is — including its core entities, states, and transitions.",
-                "Make onboarding measurable so we could identify drop-offs and prioritize based on real impact.",
+                "Create a shared understanding of what onboarding is — and what it isn't.",
+                "Make each task measurable so we could identify drop-offs and prioritize based on real impact.",
                 "Support scale as Zocdoc moved into more complex enterprise segments.",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
@@ -202,8 +202,8 @@ export default function ZocdocPage() {
             </Text>
             <LightboxImage
               src="/zocdoc/model.avif"
-              alt="System reframe — from disconnected flows to a single onboarding model"
-              caption="System reframe — from flow to model"
+              alt="System reframe — from disconnected flows to a single onboarding system"
+              caption="System reframe — from checklist to system"
             />
           </section>
 
@@ -328,7 +328,7 @@ export default function ZocdocPage() {
               <LightboxImage
                 src="/zocdoc/home-post-activation.avif"
                 alt="Zocdoc enterprise Home — post-activation dashboard"
-                caption="Enterprise Home — v3"
+                caption="Enterprise Home — v2"
               />
             </div>
 

@@ -127,8 +127,8 @@ export default function HandraisePage() {
                 Turning earned media into owned reach
               </Text>
               <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                <span>2024</span>
-                <span>Lead Product Designer – Contract</span>
+                <span> Jan 2024</span>
+                <span>Lead Product Designer</span>
               </div>
             </div>
             <LightboxImage
@@ -153,7 +153,7 @@ export default function HandraisePage() {
               measurement. I led design for Handraise's 0–1 AI product to solve this.
             </Text>
             <Text muted>
-              In 7 weeks, we built, tested, and pivoted. Early prototypes showed audience
+              In 6 weeks, we built, tested, and pivoted. Early prototypes showed audience
               targeting mattered more than content generation, which reshaped the product. I
               redesigned the experience around an audience-first workflow, created a lightweight
               design system, and left the team with a validated direction and a shippable foundation.
@@ -288,7 +288,7 @@ export default function HandraisePage() {
                   <Heading as="h4" level={4} variant="h4">Selectable post options</Heading>
                   <Text muted>
                     Content appears as selectable post options — usually three variations per audience,
-                    labeled by approach like "Recommended," "Fun," or "Data-forward."
+                    labeled by approach like "Recommended," "Fun," or "Educational."
                     Users choose a direction, then edit if needed. No blank states. We avoided
                     explaining how the AI works. Trust is earned through relevance, not explanation.
                   </Text>
@@ -402,7 +402,7 @@ export default function HandraisePage() {
               {[
                 {
                   title: "Reframed the problem before designing",
-                  body: "The brief was \"AI campaign tool for PR.\" I reframed it to \"AI distribution system\" based on what we saw in usage. Tradeoff: reset early assumptions and rebuilt the core flow mid-sprint. Outcome: aligned the team around a more valuable problem.",
+                  body: "The brief was \"AI campaign tool for PR.\" I reframed it to \"Earned media distribution\" based on what we saw in usage. Tradeoff: reset early assumptions and rebuilt the core flow mid-sprint. Outcome: aligned the team around a more valuable problem.",
                 },
                 {
                   title: "Audience-first over creative-first",
@@ -410,7 +410,7 @@ export default function HandraisePage() {
                 },
                 {
                   title: "AI as invisible infrastructure",
-                  body: "Removed prompt boxes, generate buttons, and explanatory AI copy. Tradeoff: less obvious differentiation in demos. Outcome: higher trust in use — users focused on outcomes, not how to prompt.",
+                  body: "Swapped prompt boxes for simple “Generate” buttons. Tradeoff: less obvious differentiation in demos. Outcome: infinite generation, higher trust in use — users focused on outcomes, not how to prompt.",
                 },
                 {
                   title: "Narrow MVP scope",

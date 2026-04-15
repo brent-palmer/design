@@ -97,7 +97,7 @@ export default function TangoPage() {
               How-to guides that create themselves
             </Text>
             <div className="flex flex-wrap gap-x-10 gap-y-2 font-mono text-xs uppercase tracking-[0.2em] text-muted-foreground">
-              <span>2024</span>
+              <span> Mar 2023</span>
               <span>Lead Product Designer</span>
             </div>
           </div>
@@ -193,8 +193,8 @@ export default function TangoPage() {
             <div className="space-y-6">
               <Heading as="h3" level={3} variant="h3">The north star: Capture → Polish → Share</Heading>
               <Text muted>
-                Before designing screens, I defined the product's core model. Tango wasn't a
-                recorder. It was a system: capture user actions automatically in the background,
+                Before designing screens, I defined the product's core growth model. Tango wasn't a
+                mouse clickrecorder. It was a workflow documentation and automation tool: capture user actions automatically in the background,
                 turn those actions into clear structured steps, then publish as a persistent
                 updatable link — not a file.
               </Text>
@@ -217,16 +217,21 @@ export default function TangoPage() {
                 The editor had to feel quick and optional, not like starting over.
               </Text>
               <div className="space-y-8">
-                <div className="space-y-2">
+                <div className="space-y-6">
                   <Heading as="h4" level={4} variant="h4">Progressive disclosure</Heading>
                   <Text muted>
                     By default, guides are clean and read-only. A click enables inline editing.
                     Annotations and highlights are available, but only when a step is selected.
-                    I tested a persistent toolbar against a contextual one. The persistent version
+                    Drag-and-drop table of contents allowed for rapid reordering of steps. The persistent version
                     felt like a full document editor. The contextual version kept the sense that
                     the guide was already done and just needed light refinement. That framing helped
                     users move faster.
                   </Text>
+                  <LightboxImage
+                    src="/tango/editing-hero.avif"
+                    alt="Tango guide editor—sidebar steps, drag and drop, and inline step preview"
+                    caption="Editor — contextual toolbar, drag-and-drop step ordering"
+                  />
                 </div>
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Safety over speed</Heading>
@@ -237,11 +242,6 @@ export default function TangoPage() {
                   </Text>
                 </div>
               </div>
-              <LightboxImage
-                src="/tango/editing-hero.avif"
-                alt="Tango guide editor—sidebar steps, drag and drop, and inline step preview"
-                caption="Editor — contextual toolbar, drag-and-drop step ordering"
-              />
             </div>
 
             {/* Sharing */}
@@ -284,7 +284,7 @@ export default function TangoPage() {
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">The "aha" moment</Heading>
                   <Text muted>
-                  Activation isn't about creating—it's about sharing. The "aha" moment is when someone else opens your guide for the first time. That shift reframed onboarding from creating to sharing, not just producing.
+                  Activation isn't about creating—it's about sharing. The "aha" moment is when someone else opens your guide for the first time. That shift reframed activation from creating to sharing, not just producing.
                   </Text>
                 </div>
                 <div className="space-y-2">
@@ -296,13 +296,13 @@ export default function TangoPage() {
               </div>
               <LightboxImage
                 src="/tango/export.avif"
-                alt="Export gated behind Pro—upgrade prompt in the share and export flow"
-                caption="Upgrade moment — contextual prompt at point of sharing"
+                alt="Export gated behind Pro—upgrade prompt in the export flow"
+                caption="Upgrade moment — contextual prompt at point of exporting"
               />
               <LightboxImage
                 src="/tango/core%20view.avif"
-                alt="Team Library—guide cards, grid, and Share & export from the overflow menu"
-                caption="Core view — team library and share surfaces"
+                alt="Team Library—guide cards, grid, and exporting Tangos from the overflow menu"
+                caption="Core view — team library and exporting Tangos"
               />
             </div>
           </section>
@@ -314,7 +314,7 @@ export default function TangoPage() {
               {[
                 {
                   title: "Speed over customization",
-                  body: "Shipped opinionated auto-formatting within a 1-column layout instead of letting users define structure. Tradeoff: harder to support non-linear workflows. Outcome: consistently high-quality guides out of the box, which built trust early.",
+                  body: "Shipped a dedicated edit mode instead of letting users define structure. Editors can generate Tangos for free, but users are encouraged to upgrade to Pro for the full experience. Tradeoff: less customization. Outcome: faster time to value.",
                 },
                 {
                   title: "Intent-based grouping over click fidelity",
@@ -360,10 +360,10 @@ export default function TangoPage() {
               <Heading as="h3" level={3} variant="h3">Impact</Heading>
               <CaseTable
                 rows={[
-                  ["Creation time", "~10 minutes to under 1 minute to share"],
-                  ["Activation", "68% of new users shared a guide in their first session"],
-                  ["Sharing rate", "43% of guides shared within 24 hours"],
-                  ["Retention", "61% of users who shared a guide returned within 7 days"],
+                  ["Creation time", "Cut creation time from ~10 minutes to under 1 minute. (90% reduction)"],
+                  ["Activation", "68% of new users shared a guide in their first session. Value was immediate with no setup or training required."],
+                  ["Sharing rate", "43% of guides were shared within 24 hours. Faster creation made sharing a natural next step."],
+                  ["Retention", "61% of users who shared a guide returned within 7 days (2x increase)"],
                 ]}
               />
             </div>

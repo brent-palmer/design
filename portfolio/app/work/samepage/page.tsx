@@ -124,7 +124,7 @@ export default function SamepagePage() {
             </Text>
             <Text muted>
               I led design for Samepage, a 0–1 AI product that removes that translation work. PMs
-              bring messy inputs — notes, tickets, raw context — and leave with structured,
+              bring messy inputs — notes, tickets, threads — and leave with structured,
               audience-ready updates in under a minute. I defined the product direction, designed the
               core AI interaction model, and shaped the go-to-market narrative. The product launch
               secured 20+ customers and growing.
@@ -203,8 +203,8 @@ export default function SamepagePage() {
               </Text>
               <LightboxImage
                 src="/samepage/work-brain.avif"
-                alt="System model — inputs, AI layer, output types"
-                caption="System model — inputs, AI layer, output types"
+                alt="Integrations — connecting your work tools to Samepage"
+                caption="Integrations — connecting your work tools to Samepage"
               />
             </div>
 
@@ -228,8 +228,8 @@ export default function SamepagePage() {
                   </div>
                   <LightboxImage
                     src="/samepage/sources.avif"
-                    alt="Update sections with lightweight source references"
-                    caption="Show the source — lightweight references per section"
+                    alt="Update sections with visual citations"
+                    caption="Show the source — visual citations"
                   />
                 </div>
                 <div className="space-y-2">
@@ -279,8 +279,8 @@ export default function SamepagePage() {
                   </div>
                   <LightboxImage
                     src="/samepage/text-editing.avif"
-                    alt="Bad outputs — targeted section edits with inline feedback"
-                    caption="Bad outputs — targeted section edits"
+                    alt="Polishing — targeted section edits with inline feedback"
+                    caption="Polishing — targeted section edits"
                   />
                 </div>
                 <div className="space-y-6">
@@ -292,8 +292,8 @@ export default function SamepagePage() {
                   </div>
                   <LightboxImage
                     src="/samepage/prompt-explorations.avif"
-                    alt="Confidence calibration — limited context signal"
-                    caption="Confidence calibration — limited context signal"
+                    alt="Sample prompts — personalized based on context"
+                    caption="Sample prompts — personalized based on context"
                   />
                 </div>
               </div>
@@ -356,8 +356,8 @@ export default function SamepagePage() {
               </div>
               <LightboxImage
                 src="/samepage/read-receipts.avif"
-                alt="Update view — read receipts with viewer list and timestamps"
-                caption="Update view — read receipts with viewer list and timestamps"
+                alt="Read receipts — inline viewer list and timestamps"
+                caption="Read receipts — inline viewer list and timestamps"
               />
             </div>
           </section>
