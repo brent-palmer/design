@@ -1,3 +1,3 @@
 # Design
 
-This game sucks
+Work samples and personal materials
