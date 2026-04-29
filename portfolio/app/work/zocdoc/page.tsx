@@ -174,6 +174,7 @@ export default function ZocdocPage() {
                 src="/zocdoc/journey-map.avif"
                 alt="Onboarding journey map for a single practice"
                 caption="Onboarding journey map — single practice"
+                aspectRatio="2528/1684"
               />
             </Media>
           </section>
