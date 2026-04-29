@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { LightboxImage } from "@/components/lightbox-image";
+import { CompareSlider } from "@/components/compare-slider";
 import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
@@ -101,9 +102,11 @@ export default function SamepagePage() {
               <span>Lead Product Designer</span>
             </div>
           </div>
-          <LightboxImage
-            src="/samepage/hero.avif"
-            alt="Samepage product — AI-powered project updates"
+          <CompareSlider
+            before="/samepage/hero-before.avif"
+            beforeAlt="Samepage before — scattered raw inputs"
+            after="/samepage/hero-after.avif"
+            afterAlt="Samepage after — AI-structured update"
             caption="Samepage — AI-powered project updates"
             priority
           />
