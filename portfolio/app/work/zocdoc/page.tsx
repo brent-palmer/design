@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { LightboxImage } from "@/components/lightbox-image";
+import { FigureImage } from "@/components/figure-image";
 import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { Media } from "@/components/ui/media";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
 
@@ -88,12 +89,14 @@ export default function ZocdocPage() {
               <span>Principal Product Designer</span>
             </div>
           </div>
-          <LightboxImage
-            src="/zocdoc/hero.avif"
-            alt="Zocdoc enterprise home — provider onboarding"
-            caption="Provider onboarding — enterprise home"
-            priority
-          />
+          <Media>
+            <FigureImage
+              src="/zocdoc/hero.avif"
+              alt="Zocdoc enterprise home — provider onboarding"
+              caption="Provider onboarding — enterprise home"
+              priority
+            />
+          </Media>
         </Container>
       </Section>
 
@@ -166,11 +169,13 @@ export default function ZocdocPage() {
               It also limited our ability to scale to larger, more complex enterprise customers.
             </Text>
 
-            <LightboxImage
-              src="/zocdoc/journey-map.avif"
-              alt="Onboarding journey map for a single practice"
-              caption="Onboarding journey map — single practice"
-            />
+            <Media>
+              <FigureImage
+                src="/zocdoc/journey-map.avif"
+                alt="Onboarding journey map for a single practice"
+                caption="Onboarding journey map — single practice"
+              />
+            </Media>
           </section>
 
           {/* Reframe */}
@@ -200,11 +205,13 @@ export default function ZocdocPage() {
               It defined the scope, the artifacts we created, and how we aligned with product
               and engineering.
             </Text>
-            <LightboxImage
-              src="/zocdoc/model.avif"
-              alt="System reframe — from disconnected flows to a single onboarding system"
-              caption="System reframe — from checklist to system"
-            />
+            <Media>
+              <FigureImage
+                src="/zocdoc/model.avif"
+                alt="System reframe — from disconnected flows to a single onboarding system"
+                caption="System reframe — from checklist to system"
+              />
+            </Media>
           </section>
 
           {/* Discovery */}
@@ -325,11 +332,13 @@ export default function ZocdocPage() {
                 leaving gaps.
               </Text>
 
-              <LightboxImage
-                src="/zocdoc/home-post-activation.avif"
-                alt="Zocdoc enterprise Home — post-activation dashboard"
-                caption="Enterprise Home — v2"
-              />
+              <Media>
+                <FigureImage
+                  src="/zocdoc/home-post-activation.avif"
+                  alt="Zocdoc enterprise Home — post-activation dashboard"
+                  caption="Enterprise Home — v2"
+                />
+              </Media>
             </div>
 
             {/* Surface 2 */}
@@ -366,11 +375,13 @@ export default function ZocdocPage() {
                 </div>
               </div>
 
-              <LightboxImage
-                src="/zocdoc/get-started.avif"
-                alt="Get Started — staff onboarding checklist"
-                caption="Get Started — staff checklist"
-              />
+              <Media>
+                <FigureImage
+                  src="/zocdoc/get-started.avif"
+                  alt="Get Started — staff onboarding checklist"
+                  caption="Get Started — staff checklist"
+                />
+              </Media>
             </div>
 
             {/* Surface 3 */}
@@ -400,11 +411,13 @@ export default function ZocdocPage() {
                 </div>
               </div>
 
-              <LightboxImage
-                src="/zocdoc/bulk-npi.avif"
-                alt="Bulk NPI — preview before commit for provider add"
-                caption="Bulk NPI — provider add flow"
-              />
+              <Media>
+                <FigureImage
+                  src="/zocdoc/bulk-npi.avif"
+                  alt="Bulk NPI — preview before commit for provider add"
+                  caption="Bulk NPI — provider add flow"
+                />
+              </Media>
             </div>
           </section>
 

@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { LightboxImage } from "@/components/lightbox-image";
+import { FigureImage } from "@/components/figure-image";
 import { JsonLd } from "@/components/json-ld";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { Media } from "@/components/ui/media";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
 
@@ -131,12 +132,14 @@ export default function HandraisePage() {
                 <span>Lead Product Designer</span>
               </div>
             </div>
-            <LightboxImage
-              src="/handraise/handraise-hero1.avif"
-              alt="Handraise product UI — Earned media distribution system for PR"
-              caption="Handraise — Earned media distribution system for PR"
-              priority
-            />
+            <Media>
+              <FigureImage
+                src="/handraise/handraise-hero1.avif"
+                alt="Handraise product UI — Earned media distribution system for PR"
+                caption="Handraise — Earned media distribution system for PR"
+                priority
+              />
+            </Media>
           </div>
         </Container>
       </Section>
@@ -177,11 +180,13 @@ export default function HandraisePage() {
               impact, not just impressions. But they don't have the tools to drive that themselves.
               The expectations evolved. The tools didn't.
             </Text>
-            <LightboxImage
-              src="/handraise/cision-problem.avif"
-              alt="Competitors like Cision didn't support article distribution"
-              caption="Competitors like Cision didn't support article distribution"
-            />
+            <Media>
+              <FigureImage
+                src="/handraise/cision-problem.avif"
+                alt="Competitors like Cision didn't support article distribution"
+                caption="Competitors like Cision didn't support article distribution"
+              />
+            </Media>
           </section>
 
           {/* The pivot */}
@@ -199,11 +204,13 @@ export default function HandraisePage() {
                 It worked. People could see themselves using it. But in every session, the
                 conversation shifted to a different question.
               </Text>
-              <LightboxImage
-                src="/handraise/handraise-discovery1.avif"
-                alt="Original concept — a shareable article summary for social media"
-                caption="Original concept — a shareable article summary for social media"
-              />
+              <Media>
+                <FigureImage
+                  src="/handraise/handraise-discovery1.avif"
+                  alt="Original concept — a shareable article summary for social media"
+                  caption="Original concept — a shareable article summary for social media"
+                />
+              </Media>
             </div>
 
             <div className="space-y-6">
@@ -251,12 +258,14 @@ export default function HandraisePage() {
                 content is created. Early versions placed targeting at the end. Users rushed through
                 it or skipped it. By then, key creative decisions were already locked in.
               </Text>
-              <LightboxImage
-                src="/handraise/handraise-design-first.avif"
-                alt="Audience-first flow — step 1"
-                caption="Audience-first flow — step 1"
-                priority
-              />
+              <Media>
+                <FigureImage
+                  src="/handraise/handraise-design-first.avif"
+                  alt="Audience-first flow — step 1"
+                  caption="Audience-first flow — step 1"
+                  priority
+                />
+              </Media>
               <div className="space-y-2">
                 <Heading as="h4" level={4} variant="h4">Audience before content</Heading>
                 <Text muted>
@@ -294,11 +303,13 @@ export default function HandraisePage() {
                   </Text>
                 </div>
               </div>
-              <LightboxImage
-                src="/handraise/handraise-original-bet.avif"
-                alt="AI content suggestions — multiple style variations"
-                caption="AI content suggestions — multiple style variations"
-              />
+              <Media>
+                <FigureImage
+                  src="/handraise/handraise-original-bet.avif"
+                  alt="AI content suggestions — multiple style variations"
+                  caption="AI content suggestions — multiple style variations"
+                />
+              </Media>
             </div>
 
             {/* HighFive */}
@@ -331,11 +342,13 @@ export default function HandraisePage() {
                 engineering could build without constant design input, and I could iterate without
                 breaking consistency.
               </Text>
-              <LightboxImage
-                src="/handraise/handraise-high-five.avif"
-                alt="HighFive design system — component library overview"
-                caption="HighFive design system — component library overview"
-              />
+              <Media>
+                <FigureImage
+                  src="/handraise/handraise-high-five.avif"
+                  alt="HighFive design system — component library overview"
+                  caption="HighFive design system — component library overview"
+                />
+              </Media>
             </div>
 
             {/* Iteration */}
@@ -354,11 +367,13 @@ export default function HandraisePage() {
                       quickly shifted focus to audience and distribution. Decision: pivot to audience-first.
                     </Text>
                   </div>
-                  <LightboxImage
-                    src="/handraise/handraise-iteration1.avif"
-                    alt="Iteration 1 — AI content generation flow"
-                    caption="Iteration 1 — AI content generation flow"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/handraise/handraise-iteration1.avif"
+                      alt="Iteration 1 — AI content generation flow"
+                      caption="Iteration 1 — AI content generation flow"
+                    />
+                  </Media>
                 </div>
                 <div className="space-y-6">
                   <div className="space-y-2">
@@ -369,11 +384,13 @@ export default function HandraisePage() {
                       1-click segments and curated suggestions based on article context.
                     </Text>
                   </div>
-                  <LightboxImage
-                    src="/handraise/handraise-iteration2.avif"
-                    alt="Iteration 2 — audience-first workflow"
-                    caption="Iteration 2 — audience-first workflow"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/handraise/handraise-iteration2.avif"
+                      alt="Iteration 2 — audience-first workflow"
+                      caption="Iteration 2 — audience-first workflow"
+                    />
+                  </Media>
                 </div>
                 <div className="space-y-6">
                   <div className="space-y-2">
@@ -385,11 +402,13 @@ export default function HandraisePage() {
                       fewer platforms, focusing on LinkedIn and Twitter.
                     </Text>
                   </div>
-                  <LightboxImage
-                    src="/handraise/handraise-reporting.avif"
-                    alt="Iteration 3 — Lightweight reporting"
-                    caption="Iteration 3 — Lightweight reporting"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/handraise/handraise-reporting.avif"
+                      alt="Iteration 3 — Lightweight reporting"
+                      caption="Iteration 3 — Lightweight reporting"
+                    />
+                  </Media>
                 </div>
               </div>
             </div>

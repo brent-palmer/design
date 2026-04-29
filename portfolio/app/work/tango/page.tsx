@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { LightboxImage } from "@/components/lightbox-image";
+import { FigureImage } from "@/components/figure-image";
 import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { Media } from "@/components/ui/media";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
 
@@ -101,12 +102,14 @@ export default function TangoPage() {
               <span>Lead Product Designer</span>
             </div>
           </div>
-          <LightboxImage
-            src="/tango/editing-hero.avif"
-            alt="Tango guide editor with steps and inline content"
-            caption="Tango — automated process documentation"
-            priority
-          />
+          <Media>
+            <FigureImage
+              src="/tango/editing-hero.avif"
+              alt="Tango guide editor with steps and inline content"
+              caption="Tango — automated process documentation"
+              priority
+            />
+          </Media>
         </Container>
       </Section>
 
@@ -149,11 +152,13 @@ export default function TangoPage() {
               But it felt like a feature, not a product. There was no structure, no sharing model,
               and no reason to return.
             </Text>
-            <LightboxImage
-              src="/tango/old%20way2.avif"
-              alt="Manual internal wiki with long lists of doc links—the workflow before guided steps"
-              caption="Before Tango — screenshot, annotate, paste, repeat"
-            />
+            <Media>
+              <FigureImage
+                src="/tango/old%20way2.avif"
+                alt="Manual internal wiki with long lists of doc links—the workflow before guided steps"
+                caption="Before Tango — screenshot, annotate, paste, repeat"
+              />
+            </Media>
           </section>
 
           {/* Sprint */}
@@ -202,11 +207,13 @@ export default function TangoPage() {
                 This framing clarified the product's job and created a natural growth loop: capture
                 once, share widely, update as the process evolves.
               </Text>
-              <LightboxImage
-                src="/tango/north%20star.avif"
-                alt="Capture, Polish, Share—three-step system diagram"
-                caption="North star — capture, polish, share"
-              />
+              <Media>
+                <FigureImage
+                  src="/tango/north%20star.avif"
+                  alt="Capture, Polish, Share—three-step system diagram"
+                  caption="North star — capture, polish, share"
+                />
+              </Media>
             </div>
 
             {/* Editor */}
@@ -227,11 +234,13 @@ export default function TangoPage() {
                     the guide was already done and just needed light refinement. That framing helped
                     users move faster.
                   </Text>
-                  <LightboxImage
-                    src="/tango/editing-hero.avif"
-                    alt="Tango guide editor—sidebar steps, drag and drop, and inline step preview"
-                    caption="Editor — contextual toolbar, drag-and-drop step ordering"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/tango/editing-hero.avif"
+                      alt="Tango guide editor—sidebar steps, drag and drop, and inline step preview"
+                      caption="Editor — contextual toolbar, drag-and-drop step ordering"
+                    />
+                  </Media>
                 </div>
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Safety over speed</Heading>
@@ -266,11 +275,13 @@ export default function TangoPage() {
                   </Text>
                 </div>
               </div>
-              <LightboxImage
-                src="/tango/embed.avif"
-                alt="Embed flow—share guide into Notion and other platforms"
-                caption="One guide, everywhere your team needs it"
-              />
+              <Media>
+                <FigureImage
+                  src="/tango/embed.avif"
+                  alt="Embed flow—share guide into Notion and other platforms"
+                  caption="One guide, everywhere your team needs it"
+                />
+              </Media>
             </div>
 
             {/* PLG */}
@@ -294,16 +305,20 @@ export default function TangoPage() {
                   </Text>
                 </div>
               </div>
-              <LightboxImage
-                src="/tango/export.avif"
-                alt="Export gated behind Pro—upgrade prompt in the export flow"
-                caption="Upgrade moment — contextual prompt at point of exporting"
-              />
-              <LightboxImage
-                src="/tango/core%20view.avif"
-                alt="Team Library—guide cards, grid, and exporting Tangos from the overflow menu"
-                caption="Core view — team library and exporting Tangos"
-              />
+              <Media>
+                <FigureImage
+                  src="/tango/export.avif"
+                  alt="Export gated behind Pro—upgrade prompt in the export flow"
+                  caption="Upgrade moment — contextual prompt at point of exporting"
+                />
+              </Media>
+              <Media>
+                <FigureImage
+                  src="/tango/core%20view.avif"
+                  alt="Team Library—guide cards, grid, and exporting Tangos from the overflow menu"
+                  caption="Core view — team library and exporting Tangos"
+                />
+              </Media>
             </div>
           </section>
 
@@ -335,11 +350,13 @@ export default function TangoPage() {
                     designed to scale to teams.
                   </Text>
                 </div>
-                <LightboxImage
-                  src="/tango/members.avif"
-                  alt="Workspace Members screen—roles, invites, and permission levels"
-                  caption="Members — workspace roles and admin access"
-                />
+                <Media>
+                  <FigureImage
+                    src="/tango/members.avif"
+                    alt="Workspace Members screen—roles, invites, and permission levels"
+                    caption="Members — workspace roles and admin access"
+                  />
+                </Media>
               </div>
             </div>
           </section>

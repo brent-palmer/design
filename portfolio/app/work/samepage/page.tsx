@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { LightboxImage } from "@/components/lightbox-image";
+import { FigureImage } from "@/components/figure-image";
 import { CompareSlider } from "@/components/compare-slider";
 import { JsonLd } from "@/components/json-ld";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
+import { Media } from "@/components/ui/media";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
 
@@ -102,14 +103,16 @@ export default function SamepagePage() {
               <span>Lead Product Designer</span>
             </div>
           </div>
-          <CompareSlider
-            before="/samepage/hero-before.avif"
-            beforeAlt="Samepage before — scattered raw inputs"
-            after="/samepage/hero-after.avif"
-            afterAlt="Samepage after — AI-structured update"
-            caption="Samepage — AI-powered project updates"
-            priority
-          />
+          <Media>
+            <CompareSlider
+              before="/samepage/hero-before.avif"
+              beforeAlt="Samepage before — scattered raw inputs"
+              after="/samepage/hero-after.avif"
+              afterAlt="Samepage after — AI-structured update"
+              caption="Samepage — AI-powered project updates"
+              priority
+            />
+          </Media>
         </Container>
       </Section>
 
@@ -152,11 +155,12 @@ export default function SamepagePage() {
               Samepage's thesis: PMs communicate better when the system handles the structure, not
               just the words.
             </Text>
-            <LightboxImage
-              src="/samepage/problem.avif"
-              alt="The Samepage thesis — information asymmetry"
-              caption="The Samepage thesis — information asymmetry"
-            />
+            <Media>
+              <FigureImage
+                src="/samepage/problem.avif"
+                alt="The Samepage thesis — information asymmetry"
+                caption="The Samepage thesis — information asymmetry"              />
+            </Media>
           </section>
 
           {/* My role */}
@@ -204,11 +208,14 @@ export default function SamepagePage() {
                 Rewriting clean paragraphs isn't useful. Turning messy inputs into a clear,
                 audience-appropriate narrative is the product.
               </Text>
-              <LightboxImage
-                src="/samepage/work-brain.avif"
-                alt="Integrations — connecting your work tools to Samepage"
-                caption="Integrations — connecting your work tools to Samepage"
-              />
+              <Media>
+                <FigureImage
+                  src="/samepage/north-star.avif"
+                  alt="Integrations — connecting your work tools to Samepage"
+                  caption="Integrations — connecting your work tools to Samepage"
+                  aspectRatio="3324/860"
+                />
+              </Media>
             </div>
 
             {/* AI-generated updates */}
@@ -229,11 +236,14 @@ export default function SamepagePage() {
                       hesitation we saw in early testing.
                     </Text>
                   </div>
-                  <LightboxImage
-                    src="/samepage/sources.avif"
-                    alt="Update sections with visual citations"
-                    caption="Show the source — visual citations"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/samepage/core-experience.mp4"
+                      alt="Update sections with visual citations"
+                      caption="Show the source — visual citations"
+                      aspectRatio="1868/1080"
+                    />
+                  </Media>
                 </div>
                 <div className="space-y-2">
                   <Heading as="h4" level={4} variant="h4">Structure over freeform</Heading>
@@ -245,11 +255,12 @@ export default function SamepagePage() {
                   </Text>
                 </div>
               </div>
-              <LightboxImage
-                src="/samepage/structure.avif"
-                alt="AI-generated update — structured output with sources"
-                caption="AI-generated update — structured output with sources"
-              />
+              <Media>
+                <FigureImage
+                  src="/samepage/structure.avif"
+                  alt="AI-generated update — structured output with sources"
+                  caption="AI-generated update — structured output with sources"                />
+              </Media>
             </div>
 
             {/* AI uncertainty */}
@@ -266,11 +277,12 @@ export default function SamepagePage() {
                       not blocked.
                     </Text>
                   </div>
-                  <LightboxImage
-                    src="/samepage/loading.avif"
-                    alt="Latency — progressive reveal as sections stream in"
-                    caption="Latency — progressive reveal"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/samepage/loading.avif"
+                      alt="Latency — progressive reveal as sections stream in"
+                      caption="Latency — progressive reveal"                    />
+                  </Media>
                 </div>
                 <div className="space-y-6">
                   <div className="space-y-2">
@@ -280,11 +292,12 @@ export default function SamepagePage() {
                       wasn't helpful. I designed targeted edits instead. PMs can make simple text edits and the AI will update the rest.
                     </Text>
                   </div>
-                  <LightboxImage
-                    src="/samepage/text-editing.avif"
-                    alt="Polishing — targeted section edits with inline feedback"
-                    caption="Polishing — targeted section edits"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/samepage/text-editing.avif"
+                      alt="Polishing — targeted section edits with inline feedback"
+                      caption="Polishing — targeted section edits"                    />
+                  </Media>
                 </div>
                 <div className="space-y-6">
                   <div className="space-y-2">
@@ -293,11 +306,12 @@ export default function SamepagePage() {
                     As more updates were generated, the system became more tailored and began surfacing smarter prompts. This did two things: it reduced the time to create updates, and it improved structure and accuracy by learning from prior inputs.
                     </Text>
                   </div>
-                  <LightboxImage
-                    src="/samepage/prompt-explorations.avif"
-                    alt="Sample prompts — personalized based on context"
-                    caption="Sample prompts — personalized based on context"
-                  />
+                  <Media>
+                    <FigureImage
+                      src="/samepage/prompt-explorations.avif"
+                      alt="Sample prompts — personalized based on context"
+                      caption="Sample prompts — personalized based on context"                    />
+                  </Media>
                 </div>
               </div>
             </div>
@@ -323,11 +337,14 @@ export default function SamepagePage() {
                   over the screen.
                 </Text>
               </div>
-              <LightboxImage
-                src="/samepage/copilot.avif"
-                alt="Sidecar — balancing manual editing vs global context"
-                caption="Sidecar — balancing manual editing vs global context"
-              />
+              <Media>
+                <FigureImage
+                  src="/samepage/sidecar.mp4"
+                  alt="Sidecar — balancing manual editing vs global context"
+                  caption="Sidecar — balancing manual editing vs global context"
+                  aspectRatio="1868/1080"
+                />
+              </Media>
             </div>
 
             {/* Read receipts */}
@@ -357,11 +374,12 @@ export default function SamepagePage() {
                   from the content itself.
                 </Text>
               </div>
-              <LightboxImage
-                src="/samepage/read-receipts.avif"
-                alt="Read receipts — inline viewer list and timestamps"
-                caption="Read receipts — inline viewer list and timestamps"
-              />
+              <Media>
+                <FigureImage
+                  src="/samepage/read-receipts.avif"
+                  alt="Read receipts — inline viewer list and timestamps"
+                  caption="Read receipts — inline viewer list and timestamps"                />
+              </Media>
             </div>
           </section>
 
