@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { ButtonLink } from "@/components/ui/button";
 import { CopyEmailButton } from "@/components/copy-email-button";
+import { FeaturedProjects } from "@/components/featured-projects";
 import { HeroParticles } from "@/components/hero-particles";
-import { ProjectRow } from "@/components/project-row";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
 import { Text } from "@/components/ui/text";
-import { getFeaturedProjects } from "@/lib/projects";
+import { getProjectBySlug } from "@/lib/projects";
 
 export const metadata: Metadata = {
   title: "Brent Palmer — Product Designer",
@@ -22,7 +22,9 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const featured = getFeaturedProjects();
+  const projects = ["zocdoc", "samepage", "tango", "handraise"]
+    .map((slug) => getProjectBySlug(slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <>
@@ -56,11 +58,7 @@ export default function Home() {
           >
             Featured work
           </Heading>
-          <div className="divide-y divide-foreground/10">
-            {featured.map((project) => (
-              <ProjectRow key={project.slug} project={project} />
-            ))}
-          </div>
+          <FeaturedProjects projects={projects} />
         </Container>
       </Section>
     </>

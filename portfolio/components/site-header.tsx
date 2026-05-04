@@ -73,7 +73,7 @@ export function SiteHeader() {
   }, [activeIndex]);
 
   return (
-    <header className="sticky top-0 z-10 border-b border-foreground/10 bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-10 border-b border-foreground/10 bg-background/80 backdrop-blur-md [transform:translateZ(0)] [will-change:backdrop-filter]">
       <Container className="flex items-center justify-between gap-8 py-6">
         <Link
           href="/"

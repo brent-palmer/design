@@ -22,7 +22,7 @@ export const projects: Project[] = [
     featured: true,
     summary:
       "Zocdoc's provider onboarding was fragmented, with disconnected flows and manual work slowing enterprise go-lives and straining ops. I designed a unified onboarding system — a new enterprise Home, guided tasks for staff, and a bulk NPI tool — giving practices a single source of truth.",
-    cover: "/zocdoc/hero.avif",
+    cover: "/zocdoc/zocdoc-thumbnail.avif",
     problem:
       "Teams relied on static weekly PDFs and ad-hoc SQL requests, slowing decisions during peak season.",
     approach:
@@ -39,7 +39,7 @@ export const projects: Project[] = [
     featured: true,
     summary:
       "Samepage is a platform that helps project managers and teams collaborate more effectively.",
-      cover: "/samepage/hero.avif",
+      cover: "/samepage/samepage-thumbnail.avif",
     problem:
       "Project managers and teams were struggling to collaborate effectively.",
     approach:
@@ -56,7 +56,7 @@ export const projects: Project[] = [
     featured: true,
     summary:
       "Tango is a platform that helps project managers and teams collaborate more effectively.",
-      cover: "/tango/core view.avif",
+      cover: "/tango/tango-thumbnail.avif",
     problem:
       "Project managers and teams were struggling to collaborate effectively.",
     approach:
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     featured: false,
     summary:
       "Handraise is a platform that helps project managers and teams collaborate more effectively.",
-      cover: "/handraise/handraise-hero1.avif",
+      cover: "/handraise/handraise-thumbnail@2x.avif",
     problem:
       "Project managers and teams were struggling to collaborate effectively.",
     approach:

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { ProjectRow } from "@/components/project-row";
+import { ProjectCard } from "@/components/project-card";
 import { Container } from "@/components/ui/container";
 import { Heading } from "@/components/ui/heading";
 import { Section } from "@/components/ui/section";
@@ -26,9 +26,9 @@ export default function WorkPage() {
           focus on AI workflows and strategic outcomes
           </Text>
         </div>
-        <div className="divide-y divide-foreground/10">
+        <div className="grid grid-cols-1 gap-6">
           {all.map((project) => (
-            <ProjectRow key={project.slug} project={project} />
+            <ProjectCard key={project.slug} project={project} />
           ))}
         </div>
       </Container>
